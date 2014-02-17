@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20140217175742) do
   enable_extension "plpgsql"
 
   create_table "boards", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

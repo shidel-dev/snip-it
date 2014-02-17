@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to "/users/"+user.id
+      redirect_to "/users/"+user.id.to_s
     else
       rediect_to '/login'
     end
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
                         password_confirmation: params[:password_confirmation])
     if user
       session[:user_id] = user.id
-      redirect_to "/users/"+user.id
+      redirect_to "/users/"+user.id.to_s
     else
       redirect_to '/login_forms'
     end
