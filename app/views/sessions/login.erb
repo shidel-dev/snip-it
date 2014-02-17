@@ -1,1 +1,20 @@
-<p>login</p>
+<%= form_tag(controller: "sessions", action: "login", method: "post", class: "nifty_form") do %>
+  <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag(:email) %><br>
+  <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %><br>
+  <%= submit_tag("Login") %>
+<%end%><br><br>
+
+<%= form_tag(controller: "sessions", action: "signup", method: "post", class: "nifty_form") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %><br>
+  <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag(:email) %><br>
+  <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %><br>
+  <%= label_tag(:password_confirmation, "Confirm Password:") %>
+  <%= password_field_tag(:password_confirmation) %><br>
+  <%= submit_tag("Signup") %>
+<%end%>
+
