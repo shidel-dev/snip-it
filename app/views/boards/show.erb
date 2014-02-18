@@ -1,0 +1,8 @@
+<% @board.snipits.each do |s|%>
+<div class='snipit'>
+  <h3><%=s.title%></h3>
+  <h4><%=s.language%></h4>
+  <p><%=s.description%><p>
+  <pre><%=s.content%></pre>
+</div>
+<%end %>

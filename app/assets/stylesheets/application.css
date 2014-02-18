@@ -1,4 +1,6 @@
 
+
+body{ font-family: sans-serif;}
 nav{
   height: 58px;
   background-color: #4B4B4B;
@@ -13,7 +15,7 @@ nav > a {
   text-decoration: none;
   color: white;
   margin-left: 19px;
-  font-family: sans-serif;
+
 }
 nav > form {
 float: right;
@@ -37,4 +39,9 @@ margin-top: 67px;
 width: 560px;
 margin-left: 200px;
 background-color: #F5F5F5;
+}
+.board {
+text-decoration: none;
+font-size: 18pt;
+color: black;
 }

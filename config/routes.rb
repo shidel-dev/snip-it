@@ -10,4 +10,5 @@ Codetrest::Application.routes.draw do
 
   resources 'users'
   resources 'snipits'
+  resources 'boards'
 end
