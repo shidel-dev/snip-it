@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/users/"+user.id.to_s
     else
-      rediect_to '/login'
+      redirect_to '/login'
     end
 
   end

@@ -45,3 +45,9 @@ text-decoration: none;
 font-size: 18pt;
 color: black;
 }
+
+label {
+display: inline-block;
+width: 100px;
+text-align: right;
+}
