@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20140217175742) do
     t.text     "content"
     t.string   "language"
     t.integer  "user_id"
-    t.integer  "board_id"
     t.string   "title"
     t.string   "description"
     t.datetime "created_at"

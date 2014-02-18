@@ -10,13 +10,15 @@ class SnipitsController < ApplicationController
       board = Board.find_or_create_by_name(params[:board])
       board.update(user_id:user.id)
       params[:board_id] = board.id
-      params.delete(:board)
-      snipit  = user.snipits.create(
+
+      snipit  = Snipit.create(
         title: params[:title],
         description: params[:description],
         content: params[:content],
         language: params[:language],
-        board_id: params[:board_id])
+        user_id: user.id)
+
+      board.snipits << snipit
     end
     puts snipit.valid?
     if snipit.valid?
@@ -34,3 +36,11 @@ class SnipitsController < ApplicationController
     end
   end
 end
+
+
+
+
+
+
+
+

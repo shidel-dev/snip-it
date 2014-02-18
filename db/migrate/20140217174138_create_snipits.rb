@@ -4,7 +4,6 @@ class CreateSnipits < ActiveRecord::Migration
       t.text :content
       t.string :language
       t.belongs_to :user
-      t.belongs_to :board
       t.string :title
       t.string :description
       t.timestamps
