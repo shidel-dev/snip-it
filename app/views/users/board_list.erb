@@ -1,1 +1,7 @@
-<p>list of boards</p>
+<%if @boards.empty?%>
+  <h1>Nothing to See Here</h1>
+<%else%>
+  <%@boards.each do |b| %>
+    <a class='board'><%=b.name%>:  <%=b.snipits.count%> snipits</a>
+  <%end%>
+<%end%>

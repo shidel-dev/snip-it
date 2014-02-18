@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def list_boards
+    @boards = User.find(session[:user_id]).boards
     render "board_list"
   end
 end

@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20140217175742) do
   end
 
   create_table "instances", force: true do |t|
+    t.integer  "snipit_id"
+    t.integer  "board_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
