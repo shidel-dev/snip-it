@@ -1,0 +1,25 @@
+<h1>welcome to index page</h1>
+
+<div id='gravatar'></div>
+<div id='logo'></div>
+<div id='search'>
+  <div id='search_bar'>
+    <%= form_tag do %>
+      <%= text_field_tag(:search) %>
+      <%= submit_tag("Search"), :style => "display:none" %>
+    <% end %>
+  </div>
+  <div id='language_box'>
+    <%@languages.each do |language|%>
+      <div class='language'>
+        <span class='language_name'>
+          <%=language.name%>
+        </span>
+        <div class='language_img'>
+          <%# implement attach file with paperclip%>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+
