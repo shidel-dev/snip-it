@@ -1,8 +1,0 @@
-<%if @boards.empty?%>
-  <h1>Nothing to See Here</h1>
-<%else%>
-  <%@boards.each do |b| %>
-    <%=link_to("#{b.name}:  #{b.snipits.count}  snip-its",{ controller: "boards", action: "show"},{:class => "board"} )%><br>
-  <%end%>
-<%end%>
-
