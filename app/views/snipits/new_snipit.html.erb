@@ -1,4 +1,4 @@
-<%= form_tag do %>
+<%= form_tag("/create", method: "post") do %>
   <%= text_field_tag :title %><br>
   <%= text_field_tag :description %><br>
   <%= select_tag(:language, options_for_select(@options)) %><br>
