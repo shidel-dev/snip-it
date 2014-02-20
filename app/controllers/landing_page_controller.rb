@@ -1,5 +1,5 @@
 class LandingPageController < ApplicationController
   def index
-    @languages = Language.all.order('name')
+    @languages = Language.all.shuffle[0..10]
   end
 end

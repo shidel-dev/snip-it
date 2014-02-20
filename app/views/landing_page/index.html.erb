@@ -3,7 +3,7 @@
 <div id='search'>
   <div id='search_bar'>
     <%= form_tag do %>
-      <%= text_field_tag(:search) %>
+      <%= text_field_tag "search", nil, :placeholder => 'e.g. Javascript Modal' %>
     <% end %>
   </div>
   <div id='language_box'>
@@ -13,7 +13,7 @@
           <%= language.name %>
         </span>
         <div class='language_img'>
-          <% #implement attach file with paperclip %>
+          <img src="/<%= language.code %>.png"/>
         </div>
       </div>
     <% end %>
