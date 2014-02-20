@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Snipit do
+describe Snip do
   let(:title)       {'New Snipit'}
   let(:description) {'description'}
   let(:content)     {'class NewClass; end'}
@@ -8,13 +8,13 @@ describe Snipit do
   # let(:creator)     {1}
 
   before do
-    @snipit = Snip.new
-    @snipit_filled = Snip.new(title: title, description: description, content: content)
+    @snip = Snip.new
+    @snip_filled = Snip.new(title: title, description: description, content: content)
   end
 
-  describe "#" do
+  describe "#create" do
     it "increases database count by 1 when saved" do
-      expect{@snipit_filled.save}.to change{Snip.all.size}.by(1)
+      expect{@snip_filled.save}.to change{Snip.all.size}.by(1)
     end
   end
     
