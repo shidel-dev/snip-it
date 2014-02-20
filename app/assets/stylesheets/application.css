@@ -25,7 +25,7 @@ nav {
   background-color: #BE3B3B;;
 }
 
-nav > img {
+nav > a > img {
   height: 100%;
 }
 
@@ -149,5 +149,11 @@ cursor: pointer;
   position: fixed;
   left: 50%;
   margin-left: -480px;
+}
+#results_editor {
+  width: 960px;
+  height: 500px;
+  position: relative;
+  margin: auto;
 }
 
