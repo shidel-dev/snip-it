@@ -1,7 +1,10 @@
-<%= form_tag do %>
-  <%= text_field_tag :title %>
-  <%= text_field_tag :description %>
-  <%= select_tag(:language, options_for_select(@options)) %>
-  <%= text_area_tag :content %>
+
+<%= form_tag('/#', id: 'new_snip_form') do %>
+  <p><%= text_field_tag :title %></p>
+  <p><%= text_field_tag :description %></p>
+  <p><%= select_tag(:language, options_for_select(@options)) %></p>
+  
   <%= submit_tag 'Create New Snipit' %> <!-- onclick popup modal to choose what board to put it in -->
 <% end %>
+
+<%= render 'editor' %>
