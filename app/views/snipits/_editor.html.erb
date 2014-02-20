@@ -1,5 +1,5 @@
 <style type="text/css" media="screen">
-    #editor { 
+    #editor {
         width: 500px;
         height: 500px;
         position: absolute;
@@ -17,8 +17,8 @@
     return x;
 }</div>
 
-<% javascript_path "/ace-builds/src-noconflict/ace.js" %> 
-    
+<%=javascript_include_tag "ace-builds/ace.js" %>
+
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
