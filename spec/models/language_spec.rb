@@ -13,5 +13,4 @@ describe Language do
       expect{@ruby.save}.to change{Language.all.size}.by(1)
     end
   end
-    
 end
