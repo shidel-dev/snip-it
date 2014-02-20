@@ -1,7 +1,7 @@
 <div id='container'>
 <div class='modelHolder'>
     <div class='content'>
-        
+
    </div>
     <div class='mask'>
 
@@ -31,14 +31,14 @@
   <%end%>
 </div>
 
+<%= javascript_include_tag "ace/ace" %>
+<%= javascript_include_tag "application" %>
 
-  <%= javascript_include_tag "application" %>
 <script type='text/template' class='template'>
   <button class='cupid-green'>Add to Board</button>
   <h3><%%=v.title%></h3>
   <p><%%=v.description%></p><br>
-  <pre ><%%=v.content%></pre>
-
+  <div id="results_editor"></div>
 </script>
 
 

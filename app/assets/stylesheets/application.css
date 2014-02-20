@@ -150,4 +150,10 @@ cursor: pointer;
   left: 50%;
   margin-left: -480px;
 }
+#results_editor {
+  width: 960px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+}
 

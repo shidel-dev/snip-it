@@ -1,5 +1,5 @@
 
- 
+
   function format(json){
     formatedObj = {}
     _.each($.parseJSON(json),function(item){
@@ -19,7 +19,12 @@ $(document).ready(function() {
     var template = _.template($("script.template").html());
 
     $('.content').html(template(cardData));
+    $("#results_editor").text(cardData.content);
+    var editor = ace.edit("results_editor");
 
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/ruby");
+    editor.setReadOnly(true);
   });
 
   $('.mask').on('click', function(e) {
