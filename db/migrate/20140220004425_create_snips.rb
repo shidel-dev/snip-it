@@ -1,4 +1,4 @@
-class CreateSnipits < ActiveRecord::Migration
+class CreateSnips < ActiveRecord::Migration
   def change
     create_table :snips do |t|
       t.string :title
