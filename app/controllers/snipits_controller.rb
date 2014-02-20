@@ -1,0 +1,2 @@
+class SnipitsController < ApplicationController
+end

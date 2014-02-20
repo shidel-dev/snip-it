@@ -1,0 +1,49 @@
+
+<%= render partial: 'navbar' %>
+
+
+<div id='container'>
+<div class='modelHolder'>
+    <div class='content'>
+        <p>asdfsafdsa</p>
+   </div>
+    <div class='mask'>
+
+    </div>
+
+</div>
+
+
+  <div id='languages'>
+    <ul>
+      <li>Ruby</li>
+      <li>Ruby</li>
+      <li>Ruby</li>
+      <li>Ruby</li>
+      <li>Ruby</li>
+      <li>Ruby</li>
+    </ul>
+  </div>
+<% @snips.each do |c| %>
+  <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
+
+    <h3><%= c.title %></h3>
+    <p><%=c.description %></p>
+  <%end%>
+  <%end%>
+
+
+
+
+
+</div>
+
+<script type='text/template' class='template'>
+  <h3><%%=v.title%></h3>
+  <p><%%=v.description%></p><br>
+  <pre><%%=v.content%></pre>
+
+</script>
+
+
+
