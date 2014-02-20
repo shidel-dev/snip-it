@@ -4,7 +4,7 @@ class CreateSnips < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.references :language
-      t.text :content
+      t.text :content, :limit => 300
       t.references :user
       t.references :language
       t.timestamps
