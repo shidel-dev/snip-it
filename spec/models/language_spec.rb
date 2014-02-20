@@ -10,7 +10,7 @@ describe Language do
 
   describe "#create" do
     it "increases database count by 1 when saved" do
-      expect{@ruby.save}.to change{Language.all.size}.by(1  )
+      expect{@ruby.save}.to change{Language.all.size}.by(1)
     end
   end
 end
