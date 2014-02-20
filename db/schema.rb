@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140220163328) do
 
   create_table "boards", force: true do |t|
     t.string   "title"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
