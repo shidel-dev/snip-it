@@ -11,3 +11,62 @@
  *= require_self
  *= require_tree .
  */
+ body{
+  font-family: sans-serif;
+  background-color:#CCC;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58px;
+  background-color: #BE3B3B;;
+}
+
+nav > img {
+  height: 100%;
+}
+
+form {
+  display: inline;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  margin-left: -7em;
+}
+
+input {
+  font-size: 18px;
+  width: 14em;
+}
+
+#container {
+  margin: auto;
+  margin-top: 58px;
+  width: 1200px;
+  border: solid;
+  height: 800px;
+}
+
+.card {
+  border: 1px solid;
+width: 450px;
+margin-left: 375px;
+margin-top: 110px;
+background-color:#fff;
+}
+
+#languages {
+  width: 140px;
+border: 1px solid;
+margin-top: 110px;
+position: absolute;
+margin-left: 117.5px;
+background-color:#fff;
+}
+
+#languages ul {
+  list-style: none
+}
