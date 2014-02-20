@@ -7,8 +7,9 @@ describe Instance do
   before do
     @blank_instance = Instance.new
     @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password_digest: 'password')
+    @language = Language.create(name: "Ruby")
     @board = Board.create(title: title, user_id: @user.id)
-    @snip = Snip.create(title: title, description: description, content: content, user_id: @user.id)
+    @snip = Snip.create(title: title, description: description, content: content, user_id: @user.id, language_id: @language.id)
     @valid_instance = Instance.new(board_id: @board.id, snip_id: @snip.id)
   end
 
