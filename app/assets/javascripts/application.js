@@ -22,5 +22,7 @@ $(document).ready(function() {
   $('.mask').on('click', function(e) {
     $('.modelHolder').css('display', 'none');
   });
+
+
 });
 
