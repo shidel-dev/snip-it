@@ -1,7 +1,16 @@
 Snipit::Application.routes.draw do
 
+  get '/' => 'landing_page#index'
   get '/results' => 'results#index'
-  get '/new_snipit' => 'snipits#new_snipit'
+  get '/new_snipit' => 'snipits#create'
+  get '/signup' => 'users#signup'
+  get '/login' => 'users#login'
+
+  post '/create_snipit' => 'snipits#create_snipit'
+
+  resources :snipit
+  resources :sessions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -31,7 +31,7 @@ languages.each do |k,v|
 end
 
 #Create main user
-user = User.create(first_name: 'foo', last_name: 'bar', email: 'email@email.com', password_digest: 'password')
+user = User.create(first_name: 'foo', last_name: 'bar', email: 'email@email.com', password: 'password', password_confirmation: 'password')
 
 #Create snips with that user
 10.times do
@@ -49,7 +49,8 @@ end
 
 #Create New Users and create snips with those users
 10.times do
-  user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password_digest: Faker::Internet.password)
+  password = Faker::Internet.password
+  user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: password, password_confirmation: password)
   (rand(6)+1).times do
     language = Language.find(rand(languages.size) + 1)
     board = user.boards.create(title: language.name)

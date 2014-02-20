@@ -2,12 +2,12 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_email(params[:email])
-    if user && user.auhenticate(params[:password])
+    if user && user.authenticate(params[:password])
       session[:id] = user.id
-      render ''
+      render '/'
     else
       # return login error?
-      render ''
+      render '/'
     end
   end
 
