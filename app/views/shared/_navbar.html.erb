@@ -1,6 +1,6 @@
 <nav>
-  <%= image_tag('Logo.png') %>
+  <a href="/"><%= image_tag('Logo.png') %></a>
   <%= form_tag('/#') do %>
-    <%= text_field_tag :query,nil, :placeholder => "Search Snipits!" %>
+    <%= text_field_tag :query,nil, :placeholder => "Search" %>
   <% end %>
 </nav>
