@@ -1,0 +1,21 @@
+<nav id="topbar">
+  <div id="logo">
+    <img src="/logo.png" alt="SnipIt">
+  </div>
+
+  <div id="topbar_search">
+    <%= form_tag do %>
+      <%= text_field_tag(:topbar_search_field), placeholder: 'Search' %>
+      <%= submit_tag("Search"), :style => "display:none" %>
+    <% end %>
+  </div>
+
+  <div id="user_info">
+    <% if session[:id] %>
+      <div id="gravatar"></div>
+    <% else %>
+      <a href="/signup" id="singup">Sign Up</a>
+      <a href="/login" id="login">Login</a>
+    <% end %>
+  </div>
+</nav>
