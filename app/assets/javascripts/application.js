@@ -12,6 +12,11 @@ $(document).ready(function() {
   $('.cards_data').on('click', function(e) {
     $('.modelHolder').css('display', 'block');
     var cardData = $(e.target).data('snips') || $(e.target).parent().data('snips');
+
+    _.templateSettings.variable = "v";
+    var template = _.template($("script.template").html());
+
+    $('.content').html(template(cardData));
   });
 
   $('.mask').on('click', function(e) {
