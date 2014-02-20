@@ -20,20 +20,20 @@
       <li>Ruby</li>
     </ul>
   </div>
+<%lan = []%>
 <% @snips.each do |c| %>
   <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
 
     <h3><%= c.title %></h3>
     <p><%=c.description %></p>
+    <% lan << c.language_id %>
   <%end%>
   <%end%>
-
-
-
-
-
 </div>
-
+<%= javascript_include_tag "highlighter/src/shCore.js" %>
+<% lan.uniq.each do |l| %>
+  <%= javascript_include_tag "highlighter/scripts/#{l}" %>
+<%end%>
 <script type='text/template' class='template'>
   <button class='cupid-green'>Add to Board</button>
   <h3><%%=v.title%></h3>
