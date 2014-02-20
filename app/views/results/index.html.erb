@@ -30,15 +30,14 @@
   <%end%>
   <%end%>
 </div>
-<%= javascript_include_tag "highlighter/src/shCore.js" %>
-<% lan.uniq.each do |l| %>
-  <%= javascript_include_tag "highlighter/scripts/#{l}" %>
-<%end%>
+
+
+  <%= javascript_include_tag "application" %>
 <script type='text/template' class='template'>
   <button class='cupid-green'>Add to Board</button>
   <h3><%%=v.title%></h3>
   <p><%%=v.description%></p><br>
-  <pre><%%=v.content%></pre>
+  <pre ><%%=v.content%></pre>
 
 </script>
 
