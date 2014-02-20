@@ -36,9 +36,11 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 gem 'faker'
+gem 'paperclip'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

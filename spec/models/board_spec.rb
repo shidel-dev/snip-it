@@ -12,13 +12,13 @@ describe Board do
   describe "relationships" do
     it "belongs to a user" do
       new_board = @user.boards.new(title: title)
-      expect{new_board.save}.to change{Board.all.size}.by(1  )
+      expect{new_board.save}.to change{Board.all.size}.by(1)
     end
   end
 
   describe "#create" do
     it "does not increase database count by 1 when saved without a user id" do
-      expect{@board.save}.to_not change{Board.all.size}.by(1)
+      expect{@board.save}.to_not change{Board.all.size}
     end
   end
 

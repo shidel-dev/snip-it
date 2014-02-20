@@ -1,4 +1,5 @@
 require 'spec_helper'
+# require 'shoulda-matchers'
 
 describe Snip do
   let(:title)       {'New Snipit'}
@@ -6,6 +7,9 @@ describe Snip do
   let(:content)     {'class NewClass; end'}
   # let(:languge)     {'Ruby'}
   # let(:creator)     {1}
+
+  # it { should_belong_to(:user) }
+    
 
   before do
     @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password_digest: 'password')
