@@ -6,6 +6,7 @@ class CreateSnips < ActiveRecord::Migration
       t.references :language
       t.text :content
       t.references :user
+      t.references :language
       t.timestamps
     end
   end
