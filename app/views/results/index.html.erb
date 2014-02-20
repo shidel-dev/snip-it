@@ -3,6 +3,17 @@
 
 
 <div id='container'>
+<div class='modelHolder'>
+    <div class='content'>
+        <p>asdfsafdsa</p>
+   </div>
+    <div class='mask'>
+
+    </div>
+
+</div>
+
+
   <div id='languages'>
     <ul>
       <li>Ruby</li>
@@ -16,7 +27,7 @@
 <% @snips.each do |c| %>
   <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
 
-    <h3><%=c.title %></h3>
+    <h3><%= c.title %></h3>
     <p><%=c.description %></p>
   <%end%>
   <%end%>
