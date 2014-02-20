@@ -8,13 +8,27 @@ describe Snip do
   # let(:creator)     {1}
 
   before do
-    @snip = Snip.new
-    @snip_filled = Snip.new(title: title, description: description, content: content)
+    @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password_digest: 'password')
+    @language = Language.create(name: "Ruby")
+    @valid_snip = Snip.new(title: title, description: description, content: content, user_id: @user.id, language_id: @language.id)
+  end
+
+  describe "relationships" do
+
+    it "does not increase database count by 1 when saved without a language id" do
+      snip_no_language = Snip.new(title: title, description: description, content: content, user_id: @user.id)
+      expect{snip_no_language}.to_not change{Snip.all.size}
+    end
+
+    it "does not increase database count by 1 when saved without a user id" do
+      snip_no_board = Snip.new(title: title, description: description, content: content, language_id: @language.id)
+      expect{snip_no_board.save}.to_not change{Snip.all.size}
+    end
   end
 
   describe "#create" do
-    it "increases database count by 1 when saved" do
-      expect{@snip_filled.save}.to change{Snip.all.size}.by(1)
+    it "adds to database" do
+      expect{@valid_snip.save}.to change{Snip.all.size}.by(1)
     end
   end
     
