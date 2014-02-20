@@ -1,0 +1,35 @@
+<div id="languages_sidebar">
+  <ul>
+    <% @languages.each do |language| %>
+      <li><a href="/<%= language.name %>"><%= language.name %></a></li>
+    <% end %>
+  </ul>
+</div>
+<div id="results">
+  <% @snipits.each do |snipit| %>
+    <div class="snipit_card" id="<%= snipit.id %>">
+      <span class="snipit_card_title"><%= snipit.title %></span>
+      <div class="snipit_card_description truncate"><%= snipit.description %></div>
+    </div>
+  <% end %>
+</div>
+
+<div id="snipit_modal" class="hidden">
+  <div id="snipit_modal_snipit"><img src="/snipit.png" alt="Snipit"></div>
+  <div id="snipit_modal_description"><%= snipit.description %></div>
+  <pre class="<%= snipit.language %>">
+    <div id="snipit_modal_code"><%= snipit.content %></div>
+  </pre>
+</div>
+
+<div id="board_modal" class="hidden">
+  <%= form_tag do %>
+    <%= text_field_tag(:board), :placeholder: "New Board" %>
+    <%= submit_tag("Create"), :style => "display:none" %>
+  <% end %>
+  <ul>
+    <% @boards.each do |board| %>
+      <li id="board_<%= board.id %>"><%= board.name %></li>
+    <% end %>
+  </ul>
+</div>
