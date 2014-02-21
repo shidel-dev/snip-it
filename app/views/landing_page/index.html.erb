@@ -38,9 +38,10 @@
 </div>
 
 <script type="text/javascript">
-  $('#gravatar').hover(function(){
-    $('#dropdown').removeClass('hide').addClass('gravatar');
-  }, function(){
-    $('#dropdown').addClass('hide').removeClass('gravatar')
+  $('#gravatar').click(function(){
+    $('#dropdown').fadeIn();
+  });
+  $('#dropdown').on('hover',function(){
+    $('#dropdown').fadeOut();
   })
 </script>
