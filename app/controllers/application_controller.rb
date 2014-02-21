@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
   def current_user
       @current_user ||= User.find(session[:user_id])
   end
+
+  def search
+    @snips = Snip.search_title_and_content(params[:search])
+    @languages = Language.all.order('name')
+    render "/results/index"
+  end
 end

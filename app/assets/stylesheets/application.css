@@ -107,7 +107,6 @@ button.cupid-green {
   margin-top: 250px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 #languages {
@@ -228,6 +227,14 @@ cursor: pointer;
   text-align: center;
 }
 
+#logo_nav {
+  color: #000000;
+  display: block;
+  font-family: 'notcouriersansregular',Monospace,serif;
+  font-size: 40px;
+  margin: 6px 0 0 18px;
+}
+
 .image_icon {
   height: 40px;
   width: 40px;
@@ -245,15 +252,18 @@ cursor: pointer;
   width: 70px;
 }
 
-#dropdown{
-  width: 200px;
-  position: absolute;
-  top: 110px;
-  right: 300px;
+#dropdown {
+    margin-top: 20px;
+    position: absolute;
+    right: 300px;
+    top: 90px;
+    width: 200px;
 }
+
 #dropdown ul {
 
 }
+
 #dropdown li{
   border: 1px solid #aaaaaa;
   padding: 13px;
@@ -269,3 +279,5 @@ cursor: pointer;
   right: 300px;
   top: 30px;
 }
+
+
