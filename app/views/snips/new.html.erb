@@ -1,8 +1,9 @@
 <div id="container">
 <%= form_for(:snip, url: snips_path, html: {id: 'new_snip_form'}) do |f| %>
-  <p><%= f.text_field :title %></p>
-  <p><%= f.text_field :description %></p>
-  <p><%= f.select(:language, options_for_select(@options)) %></p>
+  <p><%= f.text_field :title,  :placeholder => 'Title' %></p>
+  <p><%= f.text_field :description, :placeholder => 'Description' %></p>
+
+  <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }))%></p>
   <%= f.hidden_field :content %>
 
   <%= submit_tag 'Create New Snipit' %> <!-- onclick popup modal to choose what board to put it in -->
