@@ -1,23 +1,15 @@
 <div id='container'>
-<div class='modelHolder'>
-    <div class='content'>
-
-   </div>
-    <div class='mask'>
-
-    </div>
-
-</div>
+  <div class='modelHolder'>
+      <div class='content'></div>
+      <div class='mask'></div>
+  </div>
 
 
   <div id='languages'>
     <ul>
-      <li>Ruby</li>
-      <li>Ruby</li>
-      <li>Ruby</li>
-      <li>Ruby</li>
-      <li>Ruby</li>
-      <li>Ruby</li>
+      <% @languages.each do |language| %>
+        <li><%= link_to language.name, "/languages/#{language.code}/snips" %></li>
+      <% end %>
     </ul>
   </div>
 <%lan = []%>
