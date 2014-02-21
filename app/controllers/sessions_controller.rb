@@ -12,4 +12,9 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+
+  def logout
+    session.clear
+    redirect_to '/'
+  end
 end

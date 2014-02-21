@@ -11,14 +11,14 @@ Snipit::Application.routes.draw do
   get '/languages/:code/snips' => 'languages#index'
   post '/search' => "application#search"
   post '/create_snipit' => 'snipits#create_snipit'
-
+  get '/logout' => 'sessions#logout'
 
 
 
   # post '/create_snipit' => 'snipits#create_snipit'
 
   resources :snips
-  resources :sessions, :only => [:new, :create]
+  resources :sessions, :only => [:new, :create, :destroy]
 
 
   # resources :language, only: [] do #:new, :create
