@@ -1,6 +1,5 @@
 class LanguagesController < ApplicationController
-
-
+  layout "application"
   def index
     # all code snipits
     @languages = Language.all

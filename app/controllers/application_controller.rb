@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
- layout "landing_page", only: [:index]
-  def index
+ layout "application"
+ layout "landing_page", :only => "landing"
+  def landing
     @languages = Language.all.shuffle[0..8]
   end
   protect_from_forgery with: :exception
