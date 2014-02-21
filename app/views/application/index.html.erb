@@ -7,13 +7,13 @@
       <li><%= link_to 'New Snipit', new_snip_path %></li>
       <li><%= link_to 'My Snipits', snips_path %></li>
       <li><a href="/boards">My Boards</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li><%= link_to 'Logout', '/logout' %></li>
     </ul>
   </div>
 <% else %>
   <div id='session'>
-    <a href="/login">Login </a>|
-    <a href="/signup"> Signup</a>
+    <a href="/sessions/new">Login </a>|
+    <a href="/users/new"> Signup</a>
   </div>
 <% end %>
 <div id='logo'>SnipIt</div>
