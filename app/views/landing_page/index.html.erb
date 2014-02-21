@@ -4,8 +4,8 @@
   </div>
   <div id="dropdown" class="hide">
     <ul>
-      <li><a href="/new_snipit">Create Snipit</a></li>
-      <li><a href="/snipits">My Snipits</a></li>
+      <li><%= link_to 'New Snipit', new_snip_path %></li>
+      <li><%= link_to 'My Snipits', snips_path %></li>
       <li><a href="/boards">My Boards</a></li>
       <li><a href="/logout">Logout</a></li>
     </ul>
@@ -26,9 +26,7 @@
   <div id='language_box'>
     <% @languages.each do |language| %>
         <div class='language'>
-          <span class='language_name'>
-            <%= language.name %>
-          </span>
+
           <div class='language_img'>
              <%= link_to image_tag(language.code+".png", class: "image_icon"), "/languages/#{language.code}/snips" %>
           </div>
@@ -38,9 +36,10 @@
 </div>
 
 <script type="text/javascript">
-  $('#gravatar').hover(function(){
-    $('#dropdown').removeClass('hide').addClass('gravatar');
-  }, function(){
-    $('#dropdown').addClass('hide').removeClass('gravatar')
+  $('#gravatar').click(function(){
+    $('#dropdown').fadeIn();
+  });
+  $('#dropdown').on('hover',function(){
+    $('#dropdown').fadeOut();
   })
 </script>

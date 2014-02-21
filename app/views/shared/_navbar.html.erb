@@ -1,6 +1,6 @@
 <nav>
-  <a href="/"><%= image_tag('Logo.png') %></a>
+<%= link_to 'SnipIt', root_path, :id => 'logo_nav' %>
   <%= form_tag('/search') do %>
-    <%= text_field_tag "search",nil, :placeholder => "Search", :id =>  'query'  %>
+    <%= text_field_tag "search" ,nil, :placeholder => "Search", :id =>  'query'  %>
   <% end %>
 </nav>

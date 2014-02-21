@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  def new
+  end
 
   def create
     user = User.find_by_email(params[:email])
@@ -7,10 +9,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       # return login error?
-      render '/'
+      render 'new'
     end
-  end
-
-  def new
   end
 end

@@ -1,19 +1,25 @@
 Snipit::Application.routes.draw do
 
-  get '/' => 'landing_page#index'
+  root 'landing_page#index'
   get '/results' => 'results#index'
 
-  get '/new_snipit' => 'snipits#create'
-  get '/signup' => 'users#signup'
-  resources :users, :only => [:create]
+  # get '/new_snipit' => 'snipits#create'
+  # get '/signup' => 'users#signup'
+  resources :users
   # post 'users/create' => 'users#create'
-  get '/login' => 'users#login'
+  # get '/login' => 'users#login'
   get '/languages/:code/snips' => 'languages#index'
   post '/search' => "application#search"
   post '/create_snipit' => 'snipits#create_snipit'
 
+
+
+
+  # post '/create_snipit' => 'snipits#create_snipit'
+
   resources :snips
-  resources :sessions
+  resources :sessions, :only => [:new, :create]
+
 
   # resources :language, only: [] do #:new, :create
   #    resources :snips, only: [:index] #, :show]
@@ -23,7 +29,6 @@ Snipit::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

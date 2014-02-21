@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def search
     @snips = Snip.search_title_and_content(params[:search])
-    render "/results/index.html.erb"
+    @languages = Language.all.order('name')
+    render "/results/index"
   end
 end
