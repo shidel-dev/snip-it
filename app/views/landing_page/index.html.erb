@@ -27,9 +27,7 @@
     <% @languages.each do |language| %>
       <a href="/language/<%= language.code %>">
         <div class='language'>
-          <span class='language_name'>
-            <%= language.name %>
-          </span>
+
           <div class='language_img'>
             <img class="image_icon" src="/assets/<%= language.code %>.png"/>
           </div>
