@@ -11,7 +11,7 @@ Snipit::Application.routes.draw do
   get '/languages/:code/snips' => 'languages#index'
   post '/search' => "application#search"
   post '/create_snipit' => 'snipits#create_snipit'
-
+  get '/logout' => 'sessions#logout'
 
 
 
