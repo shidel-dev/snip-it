@@ -1,6 +1,6 @@
 var editor = ace.edit("editor");
-editor.setTheme("ace/theme/monokai");
-editor.getSession().setMode("ace/mode/ruby");
+editor.setTheme("ace/theme/solarized_light");
+editor.getSession().setMode("ace/mode/javascript");
 
 $(document).ready(function() {
   // var content = $("#content")
@@ -15,5 +15,9 @@ $(document).ready(function() {
     $.post('/snips', data, function() {
       console.log('yea!');
     })
+  })
+
+  $('#snip_language_id').change(function() {
+    editor.getSession().setMode("ace/mode/"+ $('#snip_language_id :selected').data("code"))
   })
 });

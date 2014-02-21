@@ -168,11 +168,15 @@ cursor: pointer;
   margin: auto;
 }
 
+#new_snip_form > p:nth-of-type(1){
+margin-top: 45px;
+}
+
 #editor {
   width: 960px;
   height: 500px;
   position: relative;
-  top: -710px;
+  top: -655px;
   margin: auto;
 }
 
