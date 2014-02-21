@@ -109,6 +109,10 @@ button.cupid-green {
   margin-right: auto;
 }
 
+.form-style input[type="submit"]{
+  margin-top: 18px;
+}
+
 #languages {
   width: 140px;
   margin-top: 110px;
