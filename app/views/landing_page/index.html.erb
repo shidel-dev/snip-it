@@ -1,4 +1,13 @@
-<div id='gravatar'></div>
+<% if session[:id] %>
+  <div id='gravatar'>
+    <%= image_tag User.first.gravatar_url %>
+  </div>
+<% else %>
+  <div id='session'>
+    <a href="/login">Login </a>|
+    <a href="/signup"> Signup</a>
+  </div>
+<% end %>
 <div id='logo'>SnipIt</div>
 <div id='search'>
   <div id='search_bar'>

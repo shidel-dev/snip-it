@@ -30,7 +30,7 @@ languages.each do |k,v|
 end
 
 #Create main user
-user = User.create(first_name: 'foo', last_name: 'bar', email: 'email@email.com', password: 'password', password_confirmation: 'password')
+user = User.create(first_name: 'foo', last_name: 'bar', email: 'stevenspiel@gmail.com', password: 'password', password_confirmation: 'password')
 
 #Create snips with that user
 10.times do

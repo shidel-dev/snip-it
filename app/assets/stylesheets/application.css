@@ -205,3 +205,15 @@ cursor: pointer;
   height: 40px;
   width: 40px;
 }
+
+#gravatar {
+  position: fixed;
+  right: 300px;
+  top: 30px;
+}
+
+#session {
+  position: fixed;
+  right: 300px;
+  top: 30px;
+}

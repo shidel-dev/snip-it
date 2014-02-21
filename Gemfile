@@ -47,6 +47,8 @@ gem 'paperclip'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+gem 'gravtastic'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'

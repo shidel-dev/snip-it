@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
   has_many :snips
   include BCrypt
   has_secure_password
+  include Gravtastic
+  gravtastic
 end
