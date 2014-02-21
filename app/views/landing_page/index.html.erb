@@ -2,6 +2,14 @@
   <div id='gravatar'>
     <%= image_tag User.first.gravatar_url %>
   </div>
+  <div id="dropdown" class="hide">
+    <ul>
+      <li><a href="/new_snipit">Create Snipit</a></li>
+      <li><a href="/snipits">My Snipits</a></li>
+      <li><a href="/boards">My Boards</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
 <% else %>
   <div id='session'>
     <a href="/login">Login </a>|
@@ -31,3 +39,10 @@
   </div>
 </div>
 
+<script type="text/javascript">
+  $('#gravatar').hover(function(){
+    $('#dropdown').removeClass('hide').addClass('gravatar');
+  }, function(){
+    $('#dropdown').addClass('hide').removeClass('gravatar')
+  })
+</script>

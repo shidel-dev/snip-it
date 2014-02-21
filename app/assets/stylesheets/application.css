@@ -169,10 +169,10 @@ cursor: pointer;
 }
 
 .language {
-  border: 1px solid;
+  border: 1px solid #aaaaaa;
   float: left;
   margin: 20px 35px;
-  padding: 14px;
+  padding: 10px 14px;
   text-align: center;
   width: 100px;
 }
@@ -180,6 +180,10 @@ cursor: pointer;
 #language_box > a {
   color: #000000;
   text-decoration: none;
+}
+
+.language_img {
+  padding-top: 5px;
 }
 
 #search {
@@ -207,13 +211,38 @@ cursor: pointer;
 }
 
 #gravatar {
-  position: fixed;
+  position: absolute;
   right: 300px;
   top: 30px;
+  cursor: pointer;
+}
+
+#gravatar img {
+  border-radius: 50%;
+  width: 70px;
+}
+
+#dropdown{
+  width: 200px;
+  position: absolute;
+  top: 110px;
+  right: 300px;
+}
+#dropdown ul {
+  
+}
+#dropdown li{
+  border: 1px solid #aaaaaa; 
+  padding: 13px;
+  background: #eeeeee;
+}
+
+.hide{
+  display: none;
 }
 
 #session {
-  position: fixed;
+  position: absolute;
   right: 300px;
   top: 30px;
 }
