@@ -18,21 +18,17 @@ ActiveRecord::Schema.define(version: 20140220163328) do
 
   create_table "boards", force: true do |t|
     t.string   "title"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "instances", force: true do |t|
-    t.integer  "board_id"
-    t.integer  "snip_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "languages", force: true do |t|
     t.string   "name"
-    t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
