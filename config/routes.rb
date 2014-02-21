@@ -5,6 +5,8 @@ Snipit::Application.routes.draw do
 
   get '/new_snipit' => 'snipits#create'
   get '/signup' => 'users#signup'
+  resources :users, :only => [:create]
+  # post 'users/create' => 'users#create'
   get '/login' => 'users#login'
   get '/languages/:code/snips' => 'languages#index'
 
