@@ -1,4 +1,4 @@
-
+<div id="container">
 <%= form_for(:snip, url: snips_path, html: {id: 'new_snip_form'}) do |f| %>
   <p><%= f.text_field :title %></p>
   <p><%= f.text_field :description %></p>
@@ -7,5 +7,5 @@
 
   <%= submit_tag 'Create New Snipit' %> <!-- onclick popup modal to choose what board to put it in -->
 <% end %>
-
+</div>
 <%= render partial: 'editor' %>

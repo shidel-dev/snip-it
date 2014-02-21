@@ -5,12 +5,20 @@ Snipit::Application.routes.draw do
 
   get '/new_snipit' => 'snipits#create'
   get '/signup' => 'users#signup'
+  resources :users, :only => [:create]
+  # post 'users/create' => 'users#create'
   get '/login' => 'users#login'
+  get '/languages/:code/snips' => 'languages#index'
+
 
   post '/create_snipit' => 'snipits#create_snipit'
 
-  resources :snips
+  # resources :snips
   resources :sessions
+
+  # resources :language, only: [] do #:new, :create
+  #    resources :snips, only: [:index] #, :show]
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
