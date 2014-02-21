@@ -49,11 +49,11 @@ input {
 }
 
 #container {
-  margin: auto;
-  margin-top: 58px;
-  width: 1200px;
-  height: 800px;
-  padding-top: 45px;
+width: 865px;
+margin: 0px auto;
+margin-top: 58px;
+height: 800px;
+padding-top: 45px;
 }
 
 button.cupid-green {
@@ -163,6 +163,14 @@ cursor: pointer;
   margin: auto;
 }
 
+#editor {
+  width: 960px;
+  height: 500px;
+  position: relative;
+  top: -710px;
+  margin: auto;
+}
+
 #language_box {
   padding: 80px;
   width: 600px;
@@ -238,10 +246,10 @@ cursor: pointer;
   right: 300px;
 }
 #dropdown ul {
-  
+
 }
 #dropdown li{
-  border: 1px solid #aaaaaa; 
+  border: 1px solid #aaaaaa;
   padding: 13px;
   background: #eeeeee;
 }
