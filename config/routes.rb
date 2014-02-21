@@ -14,7 +14,7 @@ Snipit::Application.routes.draw do
   # post '/create_snipit' => 'snipits#create_snipit'
 
   # resources :snips
-  resources :sessions, :only => [:new, :create]
+  resources :sessions, :only => [:new, :create, :destroy]
 
   # resources :language, only: [] do #:new, :create
   #    resources :snips, only: [:index] #, :show]
