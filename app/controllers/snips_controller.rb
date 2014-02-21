@@ -1,4 +1,3 @@
-
 class SnipsController < ApplicationController
   def new
     @snip = Snip.new

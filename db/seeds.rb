@@ -22,8 +22,7 @@ languages = {'C' => 'c_cpp',
             'Clojure' => 'clojure',
             'SQL' => 'sql',
             'HTML' => 'html',
-            'CSS' => 'css',
-            'SCSS' => 'scss'}
+            'CSS' => 'css'}
 
 #Create Language objects
 languages.each do |k,v|
