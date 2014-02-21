@@ -43,6 +43,7 @@ gem 'faker'
 
 gem 'paperclip'
 
+gem 'pg_search'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
