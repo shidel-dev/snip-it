@@ -25,12 +25,13 @@
   </div>
   <div id='language_box'>
     <% @languages.each do |language| %>
+      <%= link_to "/languages/#{language.code}/snips" do %>
         <div class='language'>
-
           <div class='language_img'>
-             <%= link_to image_tag(language.code+".png", class: "image_icon"), "/languages/#{language.code}/snips" %>
+            <%= image_tag(language.code+".png", class: "image_icon") %>
           </div>
         </div>
+      <% end %>
     <% end %>
   </div>
 </div>

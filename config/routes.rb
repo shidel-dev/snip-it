@@ -1,6 +1,6 @@
 Snipit::Application.routes.draw do
 
-  root 'landing_page#index'
+  root 'application#index'
   get '/results' => 'results#index'
 
   # get '/new_snipit' => 'snipits#create'
