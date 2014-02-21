@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
 
   before do
-    @user = User.new(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password_digest: 'password')
+    @user = User.new(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password: 'password', password_confirmation: 'password')
   end
 
   describe "#create" do

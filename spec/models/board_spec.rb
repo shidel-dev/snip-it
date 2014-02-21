@@ -6,7 +6,7 @@ describe Board do
 
   before do
     @board = Board.new(title: title)
-    @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password_digest: 'password')
+    @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password: 'password', password_confirmation: 'password')
   end
 
   describe "relationships" do

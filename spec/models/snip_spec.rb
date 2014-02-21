@@ -5,14 +5,11 @@ describe Snip do
   let(:title)       {'New Snipit'}
   let(:description) {'description'}
   let(:content)     {'class NewClass; end'}
-  # let(:languge)     {'Ruby'}
-  # let(:creator)     {1}
 
-  # it { should_belong_to(:user) }
-    
+  # it { should_belong_to(:user) } 
 
   before do
-    @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password_digest: 'password')
+    @user = User.create(email: 'email@email.com', first_name: 'foo', last_name: 'bar', password: 'password', password_confirmation: 'password')
     @language = Language.create(name: "Ruby")
     @valid_snip = Snip.new(title: title, description: description, content: content, user_id: @user.id, language_id: @language.id)
   end

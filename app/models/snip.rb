@@ -3,6 +3,6 @@ class Snip < ActiveRecord::Base
   has_many :instances
   has_one :language
 
-  # validates :user_id, :language_id, :presence => true
+  validates :user_id, :language_id, :presence => true
 end
 
