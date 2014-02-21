@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+ layout "landing_page", only: [:index]
+  def index
+    @languages = Language.all.shuffle[0..8]
+  end
   protect_from_forgery with: :exception
 
   def current_user

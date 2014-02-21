@@ -7,6 +7,6 @@ class Snip < ActiveRecord::Base
   validates :user_id, :language_id, :presence => true
 
 
-  pg_search_scope :search_title_and_content, :against => [:title,:content]
+  pg_search_scope :search_title_and_content, :against => [:title,:content,:description]
 end
 
