@@ -3,19 +3,19 @@ Snipit::Application.routes.draw do
   root 'landing_page#index'
   get '/results' => 'results#index'
 
-  get '/new_snipit' => 'snipits#create'
-  get '/signup' => 'users#signup'
-  resources :users, :only => [:create]
+  # get '/new_snipit' => 'snipits#create'
+  # get '/signup' => 'users#signup'
+  resources :users
   # post 'users/create' => 'users#create'
-  get '/login' => 'users#login'
+  # get '/login' => 'users#login'
   get '/languages/:code/snips' => 'languages#index'
 
 
-  post '/create_snipit' => 'snipits#create_snipit'
+  # post '/create_snipit' => 'snipits#create_snipit'
 
   resources :snips
-  resources :sessions
-  
+  resources :sessions, :only => [:new, :create]
+
 
   # resources :language, only: [] do #:new, :create
   #    resources :snips, only: [:index] #, :show]

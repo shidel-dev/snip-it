@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def signup
+  def new
     @user = User.new
   end
 
@@ -8,9 +8,10 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.valid?
       user.save
-      render 'index'
+      redirect_to new_session_path
     else
-      render 'index'
+      # error if unable to create user
+      render 'new'
     end
   end
 
