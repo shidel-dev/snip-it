@@ -175,6 +175,15 @@ cursor: pointer;
   padding: 10px 14px;
   text-align: center;
   width: 100px;
+  background: #e2e2e2;
+}
+
+.language:hover {
+  background: #e8e8e8;
+}
+
+.language:active{
+  background: #bbb
 }
 
 #language_box > a {
