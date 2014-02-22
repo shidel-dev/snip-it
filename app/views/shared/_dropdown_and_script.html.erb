@@ -24,7 +24,7 @@
   });
   $(document).mouseup(function (e){
     var container = $(".dropdown");
-    if (!container.is(e.target) && container.has(e.target).length === 0){
+    if (!container.is(e.target) && container.has(e.target).length === 0){ //everywhere except inside the dropdown menu
       container.fadeOut('fast');
     }
   });

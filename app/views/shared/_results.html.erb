@@ -12,15 +12,18 @@
       <% end %>
     </ul>
   </div>
-  <%lan = []%>
-  <% @snips.each do |c| %>
-    <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
+  <div id="cards">
+    <h2 id="search_title"><%= @search_title %></h2>
+    <%lan = []%>
+    <% @snips.each do |c| %>
+      <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
 
-      <h3><%= c.title %></h3>
-      <p><%=c.description %></p>
-      <% lan << c.language_id %>
+        <h3><%= c.title %></h3>
+        <p><%=c.description %></p>
+        <% lan << c.language_id %>
+      <%end%>
     <%end%>
-  <%end%>
+  </div>
 </div>
 
 <%= javascript_include_tag "ace/ace" %>

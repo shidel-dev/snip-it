@@ -3,7 +3,9 @@ class LanguagesController < ApplicationController
   def index
     # all code snipits
     @languages = Language.all
-    @snips = Language.find_by_code(params[:code]).snips.all
+    language = Language.find_by_code(params[:code])
+    @snips = language.snips.all
+    @search_title = "#{language.name} snips"
   end
 
   def show

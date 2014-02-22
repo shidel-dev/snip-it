@@ -5,6 +5,7 @@
 
 body{
   font-family: sans-serif;
+  margin: 0;
 }
 
 input {
@@ -14,8 +15,9 @@ input {
 
 #container {
   background: none repeat scroll 0 0 #FFFFFF;
-  margin: 44px auto 0;
+  margin: 0 auto;
   width: 1000px;
+  padding-top: 44px;
 }
 
 /*HOMEPAGE*/
@@ -297,12 +299,18 @@ button.cupid-green {
 
 /* CARDS */
 
+#cards {
+  margin-left: 238px;
+  width: 543px;
+}
+
 .card {
-width: 450px;
-padding:5px;
-margin-left: 375px;
-background-color: #FFF;
-cursor: pointer;
+  background-color: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 10px 40px;
 }
 
 .content {
@@ -346,11 +354,11 @@ cursor: pointer;
 /* DROPDOWN MENU */
 
 .dropdown {
-    font-size: 0.8em;
-    position: absolute;
-    right: 15%;
-    top: 43px;
-    width: 200px;
+  font-size: 0.8em;
+  position: absolute;
+  right: 15%;
+  top: 43px;
+  width: 200px;
 }
 
 #landing_dropdown .dropdown {
