@@ -4,8 +4,11 @@
     <%= form_tag('/search') do %>
       <%= text_field_tag "search" ,nil, :placeholder => "Search", :id =>  'query'  %>
     <% end %>
-    <div id='site_wide_gravatar'>
-      <%= image_tag User.first.gravatar_url %>
+    <div id="right_hand_navigation">
+      <%= link_to new_snip_path do %>
+        <div id="new_snipit_link"></div>
+      <% end %>
+      <%= image_tag User.first.gravatar_url, :id => 'site_wide_gravatar' %>
     </div>
   </div>
 </nav>
