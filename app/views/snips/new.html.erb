@@ -4,7 +4,7 @@
       <p><%= f.text_field :title,  :placeholder => 'Title', :id => 'snipit_form_title' %></p>
       <p><%= f.text_field :description, :placeholder => 'Description' %></p>
 
-      <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }))%></p>
+      <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }.insert(0,'Language')),{},{:class => 'option_select', :selected => 'Language'})%></p>
       <%= f.hidden_field :content %>
       <%= render partial: 'editor' %>
 

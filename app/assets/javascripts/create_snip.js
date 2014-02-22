@@ -3,7 +3,6 @@ editor.setTheme("ace/theme/textmate");
 editor.getSession().setMode("ace/mode/javascript");
 editor.renderer.setShowGutter(false); 
 // editor.setOption("showInvisibles", true);
-// editor.setOption("minLines", 10) 
 editor.setOption("showPrintMargin", false)
 
 $(document).ready(function() {
@@ -11,6 +10,9 @@ $(document).ready(function() {
   // content.on("keyup",function(){
   //   content.val(editor.getSession().getValue());
   // })
+  $('#editor').focus(function(){
+    console.log("focus");
+  })
   $('#new_snip_form').on('submit', function(e) {
     e.preventDefault();
     var content = $("#snip_content")
