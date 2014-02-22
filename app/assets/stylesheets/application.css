@@ -1,17 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-
 @font-face {
   font-family: GraublauWeb;
   src: url("path-to-the-font-file/GraublauWeb.otf") format("opentype");
@@ -19,17 +5,111 @@
 
 body{
   font-family: sans-serif;
-  background-color:#CCC;
 }
 
+input {
+  font-size: 18px;
+  width: 14em;
+}
+
+#container {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 44px auto 0;
+    width: 1000px;
+}
+
+/*HOMEPAGE*/
+
+#logo {
+  font-family: 'notcouriersansregular',Monospace,serif;
+  font-size: 100px;
+  margin-top: 100px;
+  padding: 70px;
+  text-align: center;
+}
+
+.image_icon {
+  height: 40px;
+  width: 40px;
+}
+
+#home_gravatar {
+  position: absolute;
+  right: 300px;
+  top: 30px;
+  cursor: pointer;
+}
+
+#home_gravatar img {
+  border-radius: 50%;
+  width: 70px;
+}
+
+#language_box {
+  padding: 80px;
+  width: 600px;
+}
+
+.language {
+  border: 1px solid #aaaaaa;
+  float: left;
+  margin: 20px 35px;
+  padding: 10px 14px;
+  text-align: center;
+  width: 100px;
+  background: #e2e2e2;
+}
+
+.language:hover {
+  background: #e8e8e8;
+}
+
+.language:active{
+  background: #bbb
+}
+
+#language_box > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.language_img {
+  padding-top: 5px;
+}
+
+#search {
+  height: 30px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 800px;
+}
+
+#search > div {
+  margin: 0 auto;
+}
+
+
+
+/*NAV BAR*/
+
 nav {
+    background-image: linear-gradient(#F9F9F9, #F3F3F3);
+    border-bottom: 1px solid #DEDEDE;
+    height: 43px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 58px;
+  height: 40px;
   background-color: #BE3B3B;;
-}
+}*/
 
 nav > a > img {
   height: 100%;
@@ -43,18 +123,74 @@ nav > form {
   margin-left: -7em;
 }
 
-input {
-  font-size: 18px;
-  width: 14em;
+#nav_container {
+  margin: auto;
+  max-width: 1000px;
+  text-align: center;
+  height: 43px;
 }
 
-#container {
-width: 865px;
-margin: 0px auto;
-margin-top: 58px;
-height: 800px;
-padding-top: 45px;
+#site_wide_gravatar {
+    cursor: pointer;
+    float: right;
+    margin: 3px;
+    text-align: right;
+    width: 8em;
 }
+
+#site_wide_gravatar img {
+  border-radius: 50%;
+  height: 37px;
+}
+
+#logo_nav {
+  color: #000000;
+  font-weight: bold;
+  display: inline-block;
+  font-family: 'notcouriersansregular',Monospace,serif;
+  font-size: 34px;
+  line-height: 39px;
+  text-decoration: none;
+  float: left;
+}
+
+#nav_container form {
+  display: inline-block;
+  line-height: 43px;
+  width: 25em;
+}
+
+form label, form input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form input {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
+    color: #333333;
+    font-size: 12px;
+    min-height: 30px;
+    outline: medium none;
+    padding: 7px 10px;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+}
+
+form input:focus {
+  /* No outline on focus */
+  outline: 0;
+  /* a darker border ? */
+  border: 1px solid #bbb;
+}
+
+
+/*OTHER*/
+
 
 button.cupid-green {
   background-color: #7FBF4D;
@@ -115,17 +251,20 @@ button.cupid-green {
   box-shadow: 0px 1px 3px #808080;
 }
 
+/* LANGUAGES BOX */
+
 #languages {
   width: 140px;
-  margin-top: 110px;
   position: absolute;
-  margin-left: 117.5px;
   background-color:#fff;
 }
 
 #languages ul {
-  list-style: none
+  list-style: none;
+  padding-left: 0;
 }
+
+/* POPUP */
 
 .mask {
   width: 100%;
@@ -143,17 +282,15 @@ button.cupid-green {
   z-index: 2;
 }
 
+/* CARDS */
+
 .card {
 width: 450px;
 padding:5px;
 margin-left: 375px;
-margin-top: 110px;
 background-color: #FFF;
 cursor: pointer;
 }
-
-.container > .card:nth-of-type(1){margin-top: 110px;}
-
 
 .content {
   height: 500px;
@@ -167,6 +304,7 @@ cursor: pointer;
   left: 50%;
   margin-left: -480px;
 }
+
 #results_editor {
   width: 960px;
   height: 500px;
@@ -186,103 +324,13 @@ margin-top: 45px;
   margin: auto;
 }
 
-#language_box {
-  padding: 80px;
-  width: 600px;
-}
-
-.language {
-  border: 1px solid #aaaaaa;
-  float: left;
-  margin: 20px 35px;
-  padding: 10px 14px;
-  text-align: center;
-  width: 100px;
-  background: #e2e2e2;
-}
-
-.language:hover {
-  background: #e8e8e8;
-}
-
-.language:active{
-  background: #bbb
-}
-
-#language_box > a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.language_img {
-  padding-top: 5px;
-}
-
-#search {
-  height: 30px;
-  margin: 0 auto;
-  padding: 10px;
-  width: 800px;
-}
-
-#search > div {
-  margin: 0 auto;
-}
-
-#logo {
-  font-family: 'notcouriersansregular',Monospace,serif;
-  font-size: 100px;
-  margin-top: 100px;
-  padding: 70px;
-  text-align: center;
-}
-
-#logo_nav {
-  color: #000000;
-  display: inline-block;
-  font-family: 'notcouriersansregular',Monospace,serif;
-  font-size: 40px;
-  margin: 5px 0 0 18px;
-}
-
-.image_icon {
-  height: 40px;
-  width: 40px;
-}
-
-#home_gravatar {
-  position: absolute;
-  right: 300px;
-  top: 30px;
-  cursor: pointer;
-}
-
-#home_gravatar img {
-  border-radius: 50%;
-  width: 70px;
-}
-
-#site_wide_gravatar {
-  float: right;
-  margin: 3px;
-  cursor: pointer;
-}
-
-#site_wide_gravatar img {
-  border-radius: 50%;
-  height: 50px;
-}
 
 #dropdown {
-    margin-top: 20px;
-    position: absolute;
-    right: 300px;
-    top: 90px;
-    width: 200px;
-}
-
-#dropdown ul {
-
+  margin-top: 20px;
+  position: absolute;
+  right: 300px;
+  top: 90px;
+  width: 200px;
 }
 
 #dropdown li{
@@ -300,5 +348,9 @@ margin-top: 45px;
   right: 300px;
   top: 30px;
 }
+
+
+
+
 
 

@@ -1,9 +1,11 @@
 <nav>
-<%= link_to '<SnipIt>', root_path, :id => 'logo_nav' %>
-<%= form_tag('/search') do %>
-  <%= text_field_tag "search" ,nil, :placeholder => "Search", :id =>  'query'  %>
-<% end %>
-<div id='site_wide_gravatar'>
-  <%= image_tag User.first.gravatar_url %>
-</div>
+  <div id="nav_container">
+    <%= link_to '<SnipIt>', root_path, :id => 'logo_nav' %>
+    <%= form_tag('/search') do %>
+      <%= text_field_tag "search" ,nil, :placeholder => "Search", :id =>  'query'  %>
+    <% end %>
+    <div id='site_wide_gravatar'>
+      <%= image_tag User.first.gravatar_url %>
+    </div>
+  </div>
 </nav>
