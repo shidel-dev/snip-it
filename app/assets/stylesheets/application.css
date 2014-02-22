@@ -107,10 +107,12 @@ button.cupid-green {
   margin-top: 250px;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 9.5em;
 }
 
 .form-style input[type="submit"]{
   margin-top: 18px;
+  box-shadow: 0px 1px 3px #808080;
 }
 
 #languages {
@@ -172,11 +174,15 @@ cursor: pointer;
   margin: auto;
 }
 
+#new_snip_form > p:nth-of-type(1){
+margin-top: 45px;
+}
+
 #editor {
   width: 960px;
   height: 500px;
   position: relative;
-  top: -710px;
+  top: -655px;
   margin: auto;
 }
 
