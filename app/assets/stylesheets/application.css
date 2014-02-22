@@ -471,6 +471,19 @@ select {
 
 }
 
-.ace_hidden-cursors {opacity:0};
+.ace_hidden-cursors {
+  opacity:0;
+}
 
+#new_snipit_container > form {
+    margin-bottom: 20px;
+}
 
+#create_new_snipit {
+  background-image: linear-gradient(#F9F9F9, #F3F3F3);
+  cursor: pointer;
+}
+
+#create_new_snipit:active{
+  background: linear-gradient(#F3f3f3, #e9e9e9);
+}
