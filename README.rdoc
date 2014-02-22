@@ -26,3 +26,18 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+*Justin Update 1
+So, I've decided to log what I've been doing in this readme 
+because it seems like a better way to communicate (i really just can't figure out how to leave good commit messages).
+So I pulled master and was getting an error 
+when I tried clicking the sign up link. There was also no navbar
+on any of the pages besides the landing page. I believe I have solved the first part
+by modifying application#current_user to user find_by_id, instead of find. find blows up 
+with an error when nil is passed in, while find_by_id will just return nil.
+I also made application#current_user a helper_method so it is available in views. This
+way we are not exposing session info in the frontend. I also added a conditional for 
+being signed in/ not signed in to the navbar partial which puts the appropriate navbar
+up on all pages.
+
