@@ -239,10 +239,10 @@ margin-top: 45px;
 
 #logo_nav {
   color: #000000;
-  display: block;
+  display: inline-block;
   font-family: 'notcouriersansregular',Monospace,serif;
   font-size: 40px;
-  margin: 6px 0 0 18px;
+  margin: 5px 0 0 18px;
 }
 
 .image_icon {
@@ -250,16 +250,27 @@ margin-top: 45px;
   width: 40px;
 }
 
-#gravatar {
+#home_gravatar {
   position: absolute;
   right: 300px;
   top: 30px;
   cursor: pointer;
 }
 
-#gravatar img {
+#home_gravatar img {
   border-radius: 50%;
   width: 70px;
+}
+
+#site_wide_gravatar {
+  float: right;
+  margin: 3px;
+  cursor: pointer;
+}
+
+#site_wide_gravatar img {
+  border-radius: 50%;
+  height: 50px;
 }
 
 #dropdown {
