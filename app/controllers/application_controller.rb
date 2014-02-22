@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-    @current_user ||= User.find(session[:user_id])
+    puts "*********ASFa3rara3sfas: #{session[:id].inspect}"
+    @current_user ||= User.find_by_id(session[:id])
   end
 
   def search
@@ -16,4 +17,6 @@ class ApplicationController < ActionController::Base
     @search_title = "Search Results for: #{params[:search]}"
     render "/results/index"
   end
+
+  helper_method :current_user
 end
