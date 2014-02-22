@@ -1,0 +1,31 @@
+<div class="dropdown hide">
+  <ul>
+    <%= link_to new_snip_path do %>
+      <li>New Snipit</li>
+    <% end %>
+    <%= link_to snips_path do %>
+      <li>My Snipits</li>
+    <% end %>
+    <%= link_to '/boards' do %>
+      <li>My Boards</li>
+    <% end %>
+    <%= link_to '/logout' do %>
+      <li>Logout</li>
+    <% end %>
+  </ul>
+</div>
+
+<script type="text/javascript">
+  $('#home_gravatar, #site_wide_gravatar').click(function(e){
+    if($(e.target).attr('id') === "site_wide_gravatar") { //place dropdown in the correct location if not on the landing page
+      $(".dropdown").css('right',($(window).width()-1000) / 2)
+    };
+    $('.dropdown').fadeIn();
+  });
+  $(document).mouseup(function (e){
+    var container = $(".dropdown");
+    if (!container.is(e.target) && container.has(e.target).length === 0){
+      container.fadeOut('fast');
+    }
+  });
+</script>

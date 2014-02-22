@@ -1,14 +1,7 @@
+<div id="landing_page_background"></div>
 <% if session[:id] %>
-  <div id='gravatar'>
+  <div id='home_gravatar'>
     <%= image_tag User.first.gravatar_url %>
-  </div>
-  <div id="dropdown" class="hide">
-    <ul>
-      <li><%= link_to 'New Snipit', new_snip_path %></li>
-      <li><%= link_to 'My Snipits', snips_path %></li>
-      <li><a href="/boards">My Boards</a></li>
-      <li><%= link_to 'Logout', '/logout' %></li>
-    </ul>
   </div>
 <% else %>
   <div id='session'>
@@ -16,7 +9,7 @@
     <a href="/users/new"> Signup</a>
   </div>
 <% end %>
-<div id='logo'>SnipIt</div>
+<div id='logo'>&#60;SnipIt&#62;</div>
 <div id='search'>
   <div id='search_bar'>
     <%= form_tag "/search" do %>
@@ -36,11 +29,3 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $('#gravatar').click(function(){
-    $('#dropdown').fadeIn();
-  });
-  $('#dropdown').on('hover',function(){
-    $('#dropdown').fadeOut();
-  })
-</script>
