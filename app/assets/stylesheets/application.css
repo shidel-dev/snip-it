@@ -372,16 +372,31 @@ button.cupid-green {
   margin: auto;
 }
 
+/* NEW SNIPIT */
+
 #new_snip_form > p:nth-of-type(1){
   margin-top: 45px;
 }
 
+#new_snipit_container{
+  margin: 0 auto;
+  width: 630px;
+}
+
+#snipit_form_title {
+  width: 350px;
+}
+
 #editor {
-  width: 960px;
   height: 300px;
   position: relative;
   margin: 30px auto;
+  border: 1px solid #CCC;
 }
+
+
+
+
 
 #session {
   position: absolute;
