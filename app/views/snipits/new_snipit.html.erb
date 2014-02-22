@@ -3,5 +3,5 @@
   <%= text_field_tag :description %><br>
   <%= select_tag(:language, options_for_select(@options)) %><br>
   <%= text_area_tag :content %><br>
-  <%= submit_tag 'Create New Snipit', id: 'new_snipit'%> <!-- onclick popup modal to choose what board to put it in -->
+  <%= submit_tag 'Create New Snipit', :id => 'new_snipit'%> <!-- onclick popup modal to choose what board to put it in -->
 <% end %>
