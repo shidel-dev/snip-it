@@ -2,9 +2,9 @@ var editor = ace.edit("editor");
 editor.setTheme("ace/theme/textmate");
 editor.getSession().setMode("ace/mode/javascript");
 editor.renderer.setShowGutter(false); 
-editor.setOption("showPrintMargin", false)
 // editor.setOption("showInvisibles", true);
 // editor.setOption("minLines", 10) 
+editor.setOption("showPrintMargin", false)
 
 $(document).ready(function() {
   // var content = $("#content")

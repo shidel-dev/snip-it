@@ -25,8 +25,6 @@ languages = {'C' => 'c_cpp',
             'HTML' => 'html',
             'CSS' => 'css'}
 
-
-
 #Create Language objects
 languages.each do |k,v|
   Language.create(name: k, code: v)
