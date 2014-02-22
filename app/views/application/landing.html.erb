@@ -1,7 +1,7 @@
 <div id="landing_page_background"></div>
-<% if session[:id] %>
+<% if current_user %>
   <div id='home_gravatar'>
-    <%= image_tag User.first.gravatar_url %>
+    <%= image_tag current_user.gravatar_url %>
   </div>
 <% else %>
   <div id='session'>
@@ -9,6 +9,7 @@
     <a href="/users/new"> Signup</a>
   </div>
 <% end %>
+
 <div id='logo'>&#60;SnipIt&#62;</div>
 <div id='search'>
   <div id='search_bar'>
