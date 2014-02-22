@@ -1,21 +1,31 @@
-<div id="dropdown" class="hide">
+<div class="dropdown hide">
   <ul>
-    <li><%= link_to 'New Snipit', new_snip_path %></li>
-    <li><%= link_to 'My Snipits', snips_path %></li>
-    <li><a href="/boards">My Boards</a></li>
-    <li><%= link_to 'Logout', '/logout' %></li>
+    <%= link_to new_snip_path do %>
+      <li>New Snipit</li>
+    <% end %>
+    <%= link_to snips_path do %>
+      <li>My Snipits</li>
+    <% end %>
+    <%= link_to '/boards' do %>
+      <li>My Boards</li>
+    <% end %>
+    <%= link_to '/logout' do %>
+      <li>Logout</li>
+    <% end %>
   </ul>
 </div>
 
 <script type="text/javascript">
-  $('#home_gravatar, #site_wide_gravatar').click(function(){
-    console.log("dropdown");
-    $('#dropdown').fadeIn();
+  $('#home_gravatar, #site_wide_gravatar').click(function(e){
+    if($(e.target).attr('id') === "site_wide_gravatar") { //place dropdown in the correct location if not on the landing page
+      $(".dropdown").css('right',($(window).width()-1000) / 2)
+    };
+    $('.dropdown').fadeIn();
   });
   $(document).mouseup(function (e){
-    var container = $("#dropdown");
+    var container = $(".dropdown");
     if (!container.is(e.target) && container.has(e.target).length === 0){
-      container.fadeOut();
+      container.fadeOut('fast');
     }
   });
 </script>

@@ -13,9 +13,9 @@ input {
 }
 
 #container {
-    background: none repeat scroll 0 0 #FFFFFF;
-    margin: 44px auto 0;
-    width: 1000px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  margin: 44px auto 0;
+  width: 1000px;
 }
 
 /*HOMEPAGE*/
@@ -39,8 +39,8 @@ input {
 }
 
 .image_icon {
-    height: 35px;
-    width: 35px;
+  height: 35px;
+  width: 35px;
 }
 
 #home_gravatar {
@@ -56,20 +56,20 @@ input {
 }
 
 #language_box {
-    min-height: 260px;
-    padding: 57px;
-    width: 516px;
+  min-height: 260px;
+  padding: 57px;
+  width: 516px;
 }
 
 .language {
-    background: none repeat scroll 0 0 #FAFAFA;
-    border: 1px solid #AAAAAA;
-    border-radius: 3px;
-    float: left;
-    margin: 17px 29px;
-    padding: 3px;
-    text-align: center;
-    width: 100px;
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+  float: left;
+  margin: 17px 29px;
+  padding: 3px;
+  text-align: center;
+  width: 100px;
 }
 
 .language:hover {
@@ -106,13 +106,13 @@ input {
 /*NAV BAR*/
 
 nav {
-    background-image: linear-gradient(#F9F9F9, #F3F3F3);
-    border-bottom: 1px solid #DEDEDE;
-    height: 43px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  background-image: linear-gradient(#F9F9F9, #F3F3F3);
+  border-bottom: 1px solid #DEDEDE;
+  height: 43px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 /*nav {
@@ -144,11 +144,11 @@ nav > form {
 }
 
 #site_wide_gravatar {
-    cursor: pointer;
-    float: right;
-    margin: 3px;
-    text-align: right;
-    width: 8em;
+  cursor: pointer;
+  float: right;
+  margin: 3px;
+  text-align: right;
+  width: 8em;
 }
 
 #site_wide_gravatar img {
@@ -180,18 +180,18 @@ form label, form input {
 }
 
 form input {
-    background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
-    color: #333333;
-    font-size: 12px;
-    min-height: 30px;
-    outline: medium none;
-    padding: 7px 10px;
-    position: relative;
-    vertical-align: middle;
-    width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
+  color: #333333;
+  font-size: 12px;
+  min-height: 30px;
+  outline: medium none;
+  padding: 7px 10px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
 }
 
 form input:focus {
@@ -326,7 +326,7 @@ cursor: pointer;
 }
 
 #new_snip_form > p:nth-of-type(1){
-margin-top: 45px;
+  margin-top: 45px;
 }
 
 #editor {
@@ -337,30 +337,56 @@ margin-top: 45px;
   margin: auto;
 }
 
-
-#dropdown {
-  margin-top: 20px;
+#session {
   position: absolute;
   right: 300px;
-  top: 90px;
-  width: 200px;
+  top: 30px;
 }
 
-#dropdown li{
-  border: 1px solid #aaaaaa;
-  padding: 13px;
-  background: #eeeeee;
+/* DROPDOWN MENU */
+
+.dropdown {
+    font-size: 0.8em;
+    position: absolute;
+    right: 15%;
+    top: 43px;
+    width: 200px;
+}
+
+#landing_dropdown .dropdown {
+  right: 20%;
+  top: 94px;
+}
+
+.dropdown ul{
+  list-style-type: none;
+  margin: 0;
+  right: 15%;
+}
+
+.dropdown li {
+  background: none repeat scroll 0 0 #FcFcFc;
+  border: 1px solid #CCC;
+  padding: 11px;
+}
+
+.dropdown li:hover{
+  background: #E8E8E8;
+}
+
+.dropdown li:active{
+  background: #F2F2F2;
+}
+
+.dropdown a{
+  text-decoration: none;
+  color: #000;
 }
 
 .hide{
   display: none;
 }
 
-#session {
-  position: absolute;
-  right: 300px;
-  top: 30px;
-}
 
 
 
