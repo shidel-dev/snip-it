@@ -2,14 +2,6 @@
   <div id='gravatar'>
     <%= image_tag User.first.gravatar_url %>
   </div>
-  <div id="dropdown" class="hide">
-    <ul>
-      <li><%= link_to 'New Snipit', new_snip_path %></li>
-      <li><%= link_to 'My Snipits', snips_path %></li>
-      <li><a href="/boards">My Boards</a></li>
-      <li><%= link_to 'Logout', '/logout' %></li>
-    </ul>
-  </div>
 <% else %>
   <div id='session'>
     <a href="/sessions/new">Login </a>|
@@ -36,16 +28,5 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $('#gravatar').click(function(){
-    $('#dropdown').fadeIn();
-  });
-  $(document).mouseup(function (e){
-    var container = $("#dropdown");
-    if (!container.is(e.target) // if the target of the click isn't the container...
-      && container.has(e.target).length === 0) // ... nor a descendant of the container
-    {
-      container.fadeOut();
-    }
-  });
-</script>
+
+<%= render 'shared/dropdown_and_script' %>
