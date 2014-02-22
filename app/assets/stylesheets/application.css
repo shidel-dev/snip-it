@@ -5,6 +5,7 @@
 
 body{
   font-family: sans-serif;
+  margin: 0;
 }
 
 input {
@@ -14,8 +15,9 @@ input {
 
 #container {
   background: none repeat scroll 0 0 #FFFFFF;
-  margin: 44px auto 0;
+  margin: 0 auto;
   width: 1000px;
+  padding-top: 44px;
 }
 
 /*HOMEPAGE*/
@@ -267,14 +269,31 @@ button.cupid-green {
 /* LANGUAGES BOX */
 
 #languages {
-  width: 140px;
+  background-color: #FFFFFF;
+  border-right: 1px solid #DEDEDE;
+  margin-top: 80px;
   position: absolute;
-  background-color:#fff;
+  width: 140px;
 }
 
 #languages ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+
+#languages ul li {
+  border-bottom: 1px solid #DEDEDE;
+  padding: 8px;
+}
+
+#languages a:last-child li {
+  border-bottom: medium none;
+}
+
+#languages a{
+  text-decoration: none;
+  color: #000;
 }
 
 /* POPUP */
@@ -297,12 +316,40 @@ button.cupid-green {
 
 /* CARDS */
 
+#cards {
+  margin-left: 153px;
+  padding-left: 86px;
+  width: 543px;
+}
+
+#search_title {
+  line-height: 40px;
+  margin: 20px 0 0;
+  min-height: 40px;
+}
+
 .card {
-width: 450px;
-padding:5px;
-margin-left: 375px;
-background-color: #FFF;
-cursor: pointer;
+  background-color: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 10px 40px;
+}
+
+.card_title{
+  margin: 8px 0;
+}
+
+.card_language {
+  color: #555;
+  font-weight: normal;
+}
+
+.card_description {
+  color: #555;
+  font-size: .9em;
+  margin: 8px 0 4px;
 }
 
 .content {
@@ -331,10 +378,9 @@ cursor: pointer;
 
 #editor {
   width: 960px;
-  height: 500px;
+  height: 300px;
   position: relative;
-  top: -655px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 #session {
@@ -346,11 +392,11 @@ cursor: pointer;
 /* DROPDOWN MENU */
 
 .dropdown {
-    font-size: 0.8em;
-    position: absolute;
-    right: 15%;
-    top: 43px;
-    width: 200px;
+  font-size: 0.8em;
+  position: absolute;
+  right: 15%;
+  top: 43px;
+  width: 200px;
 }
 
 #landing_dropdown .dropdown {

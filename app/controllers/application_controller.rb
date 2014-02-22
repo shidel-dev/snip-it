@@ -7,12 +7,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-      @current_user ||= User.find(session[:user_id])
+    @current_user ||= User.find(session[:user_id])
   end
 
   def search
     @snips = Snip.search_title_and_content(params[:search])
     @languages = Language.all.order('name')
+    @search_title = "Search Results for: #{params[:search]}"
     render "/results/index"
   end
 end

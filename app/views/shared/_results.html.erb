@@ -8,19 +8,29 @@
   <div id='languages'>
     <ul>
       <% @languages.each do |language| %>
-        <li><%= link_to language.name, "/languages/#{language.code}/snips" %></li>
+        <%= link_to "/languages/#{language.code}/snips" do %>
+          <li><%= language.name %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
-  <%lan = []%>
-  <% @snips.each do |c| %>
-    <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
+  <div id="cards">
+    <h2 id="search_title"><%= @search_title %></h2>
+    <%lan = []%>
+    <% @snips.each do |c| %>
+      <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
 
-      <h3><%= c.title %></h3>
-      <p><%=c.description %></p>
-      <% lan << c.language_id %>
+        <h4 class="card_title">
+          <span class="card_language">
+            <%= c.language.name %> -
+          </span>
+          <%= c.title %>
+        </h4>
+        <p class="card_description"><%= truncate(c.description, length: 130) %></p>
+        <% lan << c.language_id %>
+      <%end%>
     <%end%>
-  <%end%>
+  </div>
 </div>
 
 <%= javascript_include_tag "ace/ace" %>
