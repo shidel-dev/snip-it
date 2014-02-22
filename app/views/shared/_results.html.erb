@@ -1,10 +1,4 @@
 <div id='container'>
-  <div class='modelHolder'>
-      <div class='content'></div>
-      <div class='mask'></div>
-  </div>
-
-
   <div id='languages'>
     <ul>
       <% @languages.each do |language| %>
@@ -33,12 +27,19 @@
   </div>
 </div>
 
+<div class='modalHolder'>
+    <div class='content'></div>
+    <div class='mask'></div>
+</div>
+
 <%= javascript_include_tag "ace/ace" %>
 <%= javascript_include_tag "application" %>
 
 <script type='text/template' class='template'>
-  <button class='cupid-green'>Add to Board</button>
-  <h3><%%=v.title%></h3>
-  <p><%%=v.description%></p><br>
-  <div id="results_editor"></div>
+  <div id="show_card">
+    <button class='cupid-green'>Add to Board</button>
+    <h3><%%=v.title%></h3>
+    <p><%%=v.description%></p><br>
+    <div id="results_editor"></div>
+  </div>
 </script>
