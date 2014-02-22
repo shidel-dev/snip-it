@@ -5,7 +5,7 @@
       <%= text_field_tag "search" ,nil, :placeholder => "Search", :id =>  'query'  %>
     <% end %>
     <div id='site_wide_gravatar'>
-      <%= image_tag User.first.gravatar_url %>
+      <%= image_tag current_user.gravatar_url %>
     </div>
   </div>
-</nav>
+</nav> 

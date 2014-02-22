@@ -1,6 +1,8 @@
 <%= render partial: 'layouts/header' %>
+<% if current_user %>
+<%= render partial: 'shared/navbar_signed_in' %>
+<% end %>
 
-<%= render partial: 'shared/navbar' %>
 <%= yield %>
 <%= render partial: 'shared/dropdown_and_script' %>
 
