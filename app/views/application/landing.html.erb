@@ -1,3 +1,4 @@
+<div id="landing_page_background"></div>
 <% if session[:id] %>
   <div id='home_gravatar'>
     <%= image_tag User.first.gravatar_url %>
@@ -27,6 +28,5 @@
     <% end %>
   </div>
 </div>
-
 
 <%= render 'shared/dropdown_and_script' %>
