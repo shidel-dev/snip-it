@@ -3274,7 +3274,7 @@ config.defineOptions(Editor.prototype, "editor", {
     },
     highlightActiveLine: {
         set: function() {this.$updateHighlightActiveLine();},
-        initialValue: true
+        initialValue: false
     },
     highlightSelectedWord: {
         set: function(shouldHighlight) {this.$onSelectionChange();},

@@ -1,12 +1,14 @@
 <div id="container">
-<%= form_for(:snip, url: snips_path, html: {id: 'new_snip_form'}) do |f| %>
-  <p><%= f.text_field :title,  :placeholder => 'Title' %></p>
-  <p><%= f.text_field :description, :placeholder => 'Description' %></p>
+  <div id="new_snipit_container">
+    <%= form_for(:snip, url: snips_path, html: {id: 'new_snip_form'}) do |f| %>
+      <p><%= f.text_field :title,  :placeholder => 'Title', :id => 'snipit_form_title' %></p>
+      <p><%= f.text_field :description, :placeholder => 'Description' %></p>
 
-  <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }))%></p>
-  <%= f.hidden_field :content %>
+      <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }))%></p>
+      <%= f.hidden_field :content %>
+      <%= render partial: 'editor' %>
 
-  <%= submit_tag 'Create New Snipit' %> <!-- onclick popup modal to choose what board to put it in -->
-<% end %>
+      <%= submit_tag 'Create New Snipit'%> <!-- onclick popup modal to choose what board to put it in -->
+    <% end %>
+  </div>
 </div>
-<%= render partial: 'editor' %>

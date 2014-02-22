@@ -1,12 +1,10 @@
-
-
-  function format(json){
-    formatedObj = {}
-    _.each($.parseJSON(json),function(item){
-      formatedObj[item["id"]] = item;
-    } )
-    return formatedObj
-  }
+function format(json){
+  formatedObj = {}
+  _.each($.parseJSON(json),function(item){
+    formatedObj[item["id"]] = item;
+  } )
+  return formatedObj
+}
 
 $(document).ready(function() {
   $('.cards_data').on('click', function(e) {
@@ -22,7 +20,7 @@ $(document).ready(function() {
     $("#results_editor").text(cardData.content);
     var editor = ace.edit("results_editor");
 
-    editor.setTheme("ace/theme/monokai");
+    editor.setTheme("ace/theme/textmate");
     editor.getSession().setMode("ace/mode/ruby");
     editor.setReadOnly(true);
   });
@@ -31,10 +29,6 @@ $(document).ready(function() {
     $('.modelHolder').css('display', 'none');
     $('body').css('overflow', 'visible');
   });
-
-  
-
-
 
 });
 
