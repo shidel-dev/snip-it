@@ -8,7 +8,9 @@
   <div id='languages'>
     <ul>
       <% @languages.each do |language| %>
-        <li><%= link_to language.name, "/languages/#{language.code}/snips" %></li>
+        <%= link_to "/languages/#{language.code}/snips" do %>
+          <li><%= language.name %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
