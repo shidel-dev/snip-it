@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require 'faker'
+Faker::Config.locale = :en
 
 languages = {'C' => 'c_cpp',
             'Java' => 'java',
@@ -23,6 +24,8 @@ languages = {'C' => 'c_cpp',
             'SQL' => 'sql',
             'HTML' => 'html',
             'CSS' => 'css'}
+
+
 
 #Create Language objects
 languages.each do |k,v|

@@ -2,7 +2,7 @@ class Snip < ActiveRecord::Base
   include PgSearch
   belongs_to :user
   has_many :instances
-  has_one :language
+  belongs_to :language
 
   validates :user_id, :language_id, :presence => true
 

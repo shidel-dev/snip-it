@@ -337,6 +337,21 @@ button.cupid-green {
   padding: 10px 40px;
 }
 
+.card_title{
+  margin: 8px 0;
+}
+
+.card_language {
+  color: #555;
+  font-weight: normal;
+}
+
+.card_description {
+  color: #555;
+  font-size: .9em;
+  margin: 8px 0 4px;
+}
+
 .content {
   height: 500px;
   width: 960px;
@@ -363,10 +378,9 @@ button.cupid-green {
 
 #editor {
   width: 960px;
-  height: 500px;
+  height: 300px;
   position: relative;
-  top: -655px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 #session {

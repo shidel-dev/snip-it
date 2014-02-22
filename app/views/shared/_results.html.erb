@@ -20,8 +20,13 @@
     <% @snips.each do |c| %>
       <%= content_tag :div, class: "cards_data card", data: {snips:c} do %>
 
-        <h3><%= c.title %></h3>
-        <p><%=c.description %></p>
+        <h4 class="card_title">
+          <span class="card_language">
+            <%= c.language.name %> -
+          </span>
+          <%= c.title %>
+        </h4>
+        <p class="card_description"><%= truncate(c.description, length: 130) %></p>
         <% lan << c.language_id %>
       <%end%>
     <%end%>
