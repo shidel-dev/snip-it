@@ -6,11 +6,9 @@
 
 <div>
   <%= form_tag("/sessions", method: "post", class: "form-style") do |f| %>
-    <%= label_tag("Email:") %>
-    <%= text_field_tag :email %>
-    <%= label_tag("Password:") %>
-    <%= password_field_tag :password %>
-    <%= submit_tag "Sign in" %>
+    <%= text_field_tag :email, :placeholder => 'Email' %>
+    <%= password_field_tag :password, :placeholder => 'Password' %>
+    <%= submit_tag "Sign In", :class => "submit_button" %>
   <% end %>
 </div>
 
