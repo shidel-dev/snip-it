@@ -28,11 +28,28 @@
 </div>
 
 <div class='modalHolder'>
-  <div class='content'></div>
+  <div class='content'>
+    <div id="show_card">
+      <button id='add_to_board_button'>&#60;&#62;</button>
+      <div id="content"></div>
+    </div>
+  </div>
   <div class='mask'></div>
 </div>
 
-<div id="add_to_board_modal">
+<div id="board_modal">
+  <div class="content" id="add_to_board_modal">
+    <%= text_field_tag :new_board, nil, :placeholder => "New Board" %>
+    <div id="user_boards">
+      <ul>
+        <% @boards.each do |board| %>
+          <%= link_to '#', :class => "chosen_board" do %>
+            <li><%= board.title %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
   <div id="second_mask"></div>
 </div>
 
@@ -40,10 +57,10 @@
 <%= javascript_include_tag "application" %>
 
 <script type='text/template' class='template'>
-  <div id="show_card">
     <h3 class='modal_card_title'><%%=v.title%></h3>
-    <button id='add_to_board_button'>&#60;&#62;</button>
     <p class='modal_card_description'><%%=v.description%></p>
     <div id="results_editor"></div>
-  </div>
 </script>
+
+
+    
