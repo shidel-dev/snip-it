@@ -494,3 +494,9 @@ select {
   top: 150px;
   left: 521px;
 }
+
+#errors {
+  position: absolute;
+  top: 50px;
+  left: 521px;
+}

@@ -5,13 +5,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.valid?
-      user.save
+    @user = User.new(user_params)
+    if @user.valid?
+      @user.save
       flash[:success_sign_up] = "Snipit Account Successfully Created"
       redirect_to new_session_path
     else
-      # error if unable to create user
+      flash[:errors] = @user.errors.full_messages
       render 'new'
     end
   end
