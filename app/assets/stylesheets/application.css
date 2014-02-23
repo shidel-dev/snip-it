@@ -403,6 +403,18 @@ form input:focus {
   border-radius: 3px;
 }
 
+.board {
+  background-color: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 10px 40px;
+}
+
+.board_title{
+  margin: 8px 0;
+}
+
 /* NEW SNIPIT */
 
 #new_snip_form > p:nth-of-type(1){
