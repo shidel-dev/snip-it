@@ -1,13 +1,15 @@
-<% if flash[:errors] %>
-    <div class='errors'>
-      <% flash[:errors].each do |error| %>
-        <p><%= error %><p>
-      <% end %>
-    </div>
-<% end %>
 
 
-<div>
+<div class="session_form">
+  <div id="flash_signup" class="flash">
+    <% if flash[:errors] %>
+        <div class='errors'>
+          <% flash[:errors].each do |error| %>
+            <%= error %><br>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
   <%= form_for(@user, url: users_path, html: {class: "form-style"}) do |f| %>
     <%= f.text_field :first_name, :placeholder => 'First Name' %>
     <%= f.text_field :last_name, :placeholder => 'Last Name' %>

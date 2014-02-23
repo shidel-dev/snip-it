@@ -212,6 +212,14 @@ form input:focus {
   border: 1px solid #bbb;
 }
 
+.session_form{
+  margin-top: 10%;
+}
+
+.session_form input{
+  margin-bottom: 12px;
+}
+
 
 /* LANGUAGES BOX */
 
@@ -456,15 +464,10 @@ button.clean-grey:hover {
 
 .form-style {
   width: 350px;
-  margin-top: 180px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.form-style input[type="submit"]{
-  margin-top: 18px;
-  box-shadow: 0px 1px 3px #808080;
-}
 
 
 select {
@@ -498,6 +501,7 @@ select {
 .submit_button {
   background-image: linear-gradient(#F9F9F9, #F3F3F3);
   cursor: pointer;
+  box-shadow: 0px 1px 3px #808080;
 }
 
 .submit_button:active{
@@ -505,14 +509,25 @@ select {
 }
 
 /*FLASH MESSAGES*/
+.flash{
+  margin-bottom: 1em;
+}
+
+#flash_signup {
+  min-height: 4em;
+  margin-top: -4em;
+}
+
+#flash_signin {
+  min-height: 1em;
+}
+
 #flash_success_sign_up {
-  position: absolute;
-  top: 150px;
-  left: 521px;
+  color: #008000;
+  text-align: center;
 }
 
 .errors {
-  position: absolute;
-  top: 50px;
-  left: 521px;
+  text-align: center;
+  color: red;
 }
