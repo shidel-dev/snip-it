@@ -32,7 +32,7 @@ $(document).ready(function() {
   });
 
   $('.mask').on('click', function(e) {
-    $('.modalHolder').css('display', 'none');
+    $('.modalHolder').hide();
     $('body').css('overflow', 'visible');
   });
   
@@ -44,7 +44,13 @@ $(document).ready(function() {
 
   $("#second_mask").on('click', function(){
     $('#board_modal').hide();
+    $('.modalHolder').hide();
   });
+
+  $(".chosen_board").on('click', function(){
+    $('#board_modal').hide();
+    $('.modalHolder').hide();
+  })
 
 });
 

@@ -321,12 +321,25 @@ form input:focus {
   width: 95%;
 }
 
+#user_boards{
+  max-height: 300px;
+  overflow: scroll;
+}
+
+#user_boards ul{
+  padding-left: 0;
+}
+
 #user_boards li {
   border: 1px solid #DEDEDE;
   border-radius: 3px;
   margin: 3px 0;
   padding: 5px;
   width: 95%;
+}
+
+#user_boards li:hover{
+  background: #F8f8f8;
 }
 
 /* CARDS */
@@ -418,7 +431,7 @@ form input:focus {
   font-size: 0.8em;
   position: absolute;
   right: 15%;
-  top: 43px;
+  top: 44px;
   width: 200px;
 }
 
@@ -434,13 +447,14 @@ form input:focus {
 }
 
 .dropdown li {
-  background: none repeat scroll 0 0 #FcFcFc;
-  border: 1px solid #CCC;
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #dedede;
   padding: 11px;
+  border-top: none;
 }
 
 .dropdown li:hover{
-  background: #E8E8E8;
+  background: #f8f8f8;
 }
 
 .dropdown li:active{
@@ -570,15 +584,4 @@ select {
 .errors {
   text-align: center;
   color: red;
-}
-
-/* BOARDS */
-
-#user_boards{
-  max-height: 300px;
-  overflow: scroll;
-}
-
-#user_boards ul{
-  padding-left: 0;
 }
