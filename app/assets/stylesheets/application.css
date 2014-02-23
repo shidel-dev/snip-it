@@ -390,6 +390,10 @@ form input:focus {
   top: 30px;
 }
 
+#session a {
+  text-decoration: none;
+}
+ 
 /* MODAL CARD */
 .modal_card_title{
   margin:4px 0;
