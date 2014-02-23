@@ -52,7 +52,7 @@
     <div id="user_boards">
       <ul>
         <% @boards.each do |board| %>
-          <%= link_to '#', :class => "chosen_board" do %>
+          <%= link_to '#', :class => "chosen_board", :id => board.id do %>
             <li><%= board.title %></li>
           <% end %>
         <% end %>
@@ -66,9 +66,26 @@
 <%= javascript_include_tag "application" %>
 
 <script type='text/template' class='template'>
-    <h3 class='modal_card_title'><%%=v.title%></h3>
+    <h3 class='modal_card_title' id='<%%= v.id %>'><%%=v.title%></h3>
     <p class='modal_card_description'><%%=v.description%></p>
     <div id="results_editor"></div>
+</script>
+
+<script type="text/javascript">
+  // $(".chosen_board").on('click', function(e){
+    // var data = {boardName: $(e.target).html(), snipit_id: $(".modal_card_title").attr('id')};
+    // $.ajax({
+    //   url: '/instances',
+    //   type: 'post',
+    //   data: (data),
+    //   success: function(){
+    //     console.log(data);
+    //   },
+    //   error: function(){
+    //     console.log(data);
+    //   }
+    // });
+  // })
 </script>
 
 
