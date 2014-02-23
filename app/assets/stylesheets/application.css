@@ -20,6 +20,10 @@ input {
   padding-top: 44px;
 }
 
+a:hover {
+  color: #666 !important;
+}
+
 
 /*HOMEPAGE*/
 
@@ -138,17 +142,25 @@ nav > form {
 
 .right_hand_navigation {
   float: right;
-  min-width: 8em;
+  min-width: 11em;
   text-align: right;
-  line-height: 40px;
+  line-height: 45px;
+}
+
+.right_hand_navigation a {
+    display: inline-block;
+    height: 45px;
+    margin-left: 10px;
 }
 
 #new_snipit_link {
-  background: url("plus.png") no-repeat scroll left center / 20px 20px rgba(0, 0, 0, 0);
-  cursor: pointer;
-  display: inline-block;
-  height: 40px;
-  width: 28px;
+    background: url("plus.png") no-repeat scroll left center / 20px 20px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin-top: -5px;
+    vertical-align: top;
+    width: 28px;
 }
 
 #site_wide_gravatar {
@@ -169,6 +181,10 @@ nav > form {
   line-height: 39px;
   text-decoration: none;
   float: left;
+}
+
+#logo_nav:hover{
+  color: #000 !important;
 }
 
 #nav_container form {
@@ -257,7 +273,7 @@ form input:focus {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
   left: 0;
   top: 0;
   z-index: 3;
@@ -278,17 +294,17 @@ form input:focus {
   position: fixed;
   left: 50%;
   top:50%;
-  width: 658px;
+  width: 684px;
   border-radius: 2px;
 }
 
-.content > div#show_card {
-    padding: 15px;
+#show_card {
+  padding: 24px 28px 40px; 
 }
 
 #cards {
-  margin-left: 153px;
-  padding-left: 86px;
+  margin-left: 165px;
+  padding-left: 100px;
   width: 543px;
 }
 
@@ -408,7 +424,8 @@ form input:focus {
 
 .session a {
   text-decoration: none;
-  color: #333333  ;
+  color: #333333;
+  margin-left: 25px;
 }
 
 #session a:visited {
@@ -419,33 +436,33 @@ form input:focus {
 .modal_card_title{
   margin:4px 0;
   width:90%;
+  display: inline-block;
+}
+
+.modal_card_description{
+  margin: 9px 0 16px;
 }
 
 
 button.clean-grey {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
   background-color: #EEEEEE;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEEEEE), color-stop(100%, #CCCCCC));
-  background-image: -webkit-linear-gradient(top, #EEEEEE, #CCCCCC);
-  background-image: -moz-linear-gradient(top, #EEEEEE, #CCCCCC);
-  background-image: -ms-linear-gradient(top, #EEEEEE, #CCCCCC);
-  background-image: -o-linear-gradient(top, #EEEEEE, #CCCCCC);
-  background-image: linear-gradient(top, #EEEEEE, #CCCCCC);
-  border: 1px solid #CCCCCC;
-  border-bottom: 1px solid #BBBBBB;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  background-image: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC);
+  border-color: #CCCCCC #CCCCCC #BBBBBB;
+  border-image: none;
   border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
   color: #333333;
+  float: right;
   font-family: 'notcouriersansregular',Monospace,serif;
   font-size: 15px;
-  line-height: 1;
-  padding: 5px 3px 6px 3px;
   font-weight: bold;
-  text-align: center;
-  text-shadow: #EEEEEE;
-  position: absolute;
-  right: 23px;
-  top: 11px;
+  line-height: 1;
+  padding: 5px 3px 6px;
 }
 
 button.clean-grey:hover {
@@ -501,7 +518,6 @@ select {
 .submit_button {
   background-image: linear-gradient(#F9F9F9, #F3F3F3);
   cursor: pointer;
-  box-shadow: 0px 1px 3px #808080;
 }
 
 .submit_button:active{
