@@ -7,6 +7,7 @@ Snipit::Application.routes.draw do
   # get '/signup' => 'users#signup'
   resources :users
   resources :boards
+  resources :instances
   # post 'users/create' => 'users#create'
   # get '/login' => 'users#login'
   get '/languages/:code/snips' => 'languages#index'
