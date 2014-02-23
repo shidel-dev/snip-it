@@ -20,6 +20,10 @@ input {
   padding-top: 44px;
 }
 
+a:hover {
+  color: #666 !important;
+}
+
 
 /*HOMEPAGE*/
 
@@ -151,7 +155,9 @@ nav > form {
   background: url("plus.png") no-repeat scroll left center / 20px 20px rgba(0, 0, 0, 0);
   cursor: pointer;
   display: inline-block;
-  height: 40px;
+  height: 20px;
+  padding-top: 23px;
+  vertical-align: top;
   width: 28px;
 }
 
@@ -412,7 +418,8 @@ form input:focus {
 
 .session a {
   text-decoration: none;
-  color: #333333  ;
+  color: #333333;
+  margin-left: 10px;
 }
 
 #session a:visited {

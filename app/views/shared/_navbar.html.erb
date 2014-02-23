@@ -6,9 +6,9 @@
     <% end %>
     <% if current_user %>
       <div class="right_hand_navigation">
-        <%= link_to new_snip_path do %>
-          <div id="new_snipit_link"></div>
-        <% end %>
+        <div id="new_snipit_link">
+          <%= link_to '', new_snip_path%>
+        </div>
         <%= image_tag current_user.gravatar_url, :id => 'site_wide_gravatar' %>
       </div>
 	  <% else %>
