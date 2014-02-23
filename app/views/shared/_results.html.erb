@@ -24,6 +24,13 @@
         <% lan << c.language_id %>
       <%end%>
     <%end%>
+    <% if current_page?(boards_path) %>
+      <% @boards.each do |board| %>
+        <div class="card">
+          <h4 class="card_title"><%= board.title %></h4>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
