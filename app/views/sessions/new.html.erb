@@ -1,14 +1,16 @@
 
-	<% if flash[:success_sign_up] %>
-		<p id='flash_success_sign_up'><%= flash[:success_sign_up] %><p>
-	<% end %>
-
-  <% if flash[:login_error] %>
-    <p class='errors'><%= flash[:login_error] %><p>
-  <% end %>
 
 
-<div>
+<div class="session_form">
+  <div id="flash_signin" class="flash">
+  	<% if flash[:success_sign_up] %>
+  		<div id='flash_success_sign_up'><%= flash[:success_sign_up] %></div>
+  	<% end %>
+
+    <% if flash[:login_error] %>
+      <div class='errors'><%= flash[:login_error] %></div>
+    <% end %>
+  </div>
   <%= form_tag("/sessions", method: "post", class: "form-style") do |f| %>
     <%= text_field_tag :email, :placeholder => 'Email' %>
     <%= password_field_tag :password, :placeholder => 'Password' %>
