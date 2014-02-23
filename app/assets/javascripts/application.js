@@ -7,6 +7,7 @@ function format(json){
 }
 
 $(document).ready(function() {
+
   $('.cards_data').on('click', function(e) {
     $('.modalHolder').css('display', 'block');
 
@@ -37,3 +38,9 @@ $(document).ready(function() {
 
 });
 
+$(document).on('page:load', function() {
+    console.log("here");
+  $('#add_to_board_button').on('click',function(){
+    $("#add_to_board_modal").show();
+  });
+});

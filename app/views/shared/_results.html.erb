@@ -28,8 +28,12 @@
 </div>
 
 <div class='modalHolder'>
-    <div class='content'></div>
-    <div class='mask'></div>
+  <div class='content'></div>
+  <div class='mask'></div>
+</div>
+
+<div id="add_to_board_modal">
+  <div id="second_mask"></div>
 </div>
 
 <%= javascript_include_tag "ace/ace" %>
@@ -38,7 +42,7 @@
 <script type='text/template' class='template'>
   <div id="show_card">
     <h3 class='modal_card_title'><%%=v.title%></h3>
-    <button class='clean-grey'>&#60;&#62;</button>
+    <button id='add_to_board_button'>&#60;&#62;</button>
     <p class='modal_card_description'><%%=v.description%></p>
     <div id="results_editor"></div>
   </div>
