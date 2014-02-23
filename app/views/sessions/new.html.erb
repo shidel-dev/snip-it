@@ -3,6 +3,10 @@
 		<p id='flash_success_sign_up'><%= flash[:success_sign_up] %><p>
 	<% end %>
 
+  <% if flash[:login_error] %>
+    <p class='errors'><%= flash[:login_error] %><p>
+  <% end %>
+
 
 <div>
   <%= form_tag("/sessions", method: "post", class: "form-style") do |f| %>

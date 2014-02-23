@@ -402,6 +402,10 @@ form input:focus {
   text-decoration: none;
   color: #333333  ;
 }
+
+#session a:visited {
+  color: black;
+}
  
 /* MODAL CARD */
 .modal_card_title{
@@ -507,7 +511,7 @@ select {
   left: 521px;
 }
 
-#errors {
+.errors {
   position: absolute;
   top: 50px;
   left: 521px;
