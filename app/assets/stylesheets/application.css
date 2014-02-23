@@ -151,7 +151,7 @@ nav > form {
     display: inline-block;
     height: 45px;
     margin-left: 10px;
-}
+}/**/
 
 #new_snipit_link {
     background: url("plus.png") no-repeat scroll left center / 20px 20px rgba(0, 0, 0, 0);

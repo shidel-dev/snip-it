@@ -5,16 +5,16 @@
       <%= text_field_tag "search" ,nil, :placeholder => "Search", :id =>  'query'  %>
     <% end %>
     <% if current_user %>
-      <div class="right_hand_navigation">
-        <a href="/snips/new">
-        <div id="new_snipit_link"></div>
-        </a>
+      <span class="right_hand_navigation">
+        <%= link_to new_snip_path do %>
+          <div id="new_snipit_link"></div>
+        <% end %>
         <%= image_tag current_user.gravatar_url, :id => 'site_wide_gravatar' %>
-      </div>
+      </span>
 	  <% else %>
 	   	<span class="right_hand_navigation session">
-		    <a href="/sessions/new">Login</a>
-		    <a href="/users/new">Signup</a>
+        <%= link_to 'Login', new_session_path %>
+        <%= link_to 'Signup', new_user_path %>
  			</span>
     <% end %>
   </div>
