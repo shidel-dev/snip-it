@@ -1,3 +1,12 @@
+<% if flash[:errors] %>
+    <div id='errors'>
+      <% flash[:errors].each do |error| %>
+        <p><%= error %><p>
+      <% end %>
+    </div>
+<% end %>
+
+
 <div>
   <%= form_for(@user, url: users_path, html: {class: "form-style"}) do |f| %>
     <%= f.label :first_name %>
