@@ -39,7 +39,16 @@
 
 <div id="board_modal">
   <div class="content" id="add_to_board_modal">
-    Add to Board:
+    <%= text_field_tag :new_board, nil, :placeholder => "New Board" %>
+    <div id="user_boards">
+      <ul>
+        <% @boards.each do |board| %>
+          <%= link_to '#', :class => "chosen_board" do %>
+            <li><%= board.title %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
   </div>
   <div id="second_mask"></div>
 </div>

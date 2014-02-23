@@ -6,6 +6,7 @@ class LanguagesController < ApplicationController
     language = Language.find_by_code(params[:code])
     @snips = language.snips.all
     @search_title = "#{language.name} snips"
+    @boards = Board.where('user_id = ?', session[:id])
   end
 
   def show

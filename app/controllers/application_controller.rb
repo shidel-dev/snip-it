@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     @snips = Snip.search_title_and_content(params[:search])
     @languages = Language.all.order('name')
     @search_title = "Search Results for: #{params[:search]}"
+    @boards = Board.where('user_id = ?', session[:id])
     render "/results/index"
   end
 
