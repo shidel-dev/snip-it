@@ -1,32 +1,5 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
 
 *Justin Update 1
 So, I've decided to log what I've been doing in this readme 
@@ -41,3 +14,6 @@ way we are not exposing session info in the frontend. I also added a conditional
 being signed in/ not signed in to the navbar partial which puts the appropriate navbar
 up on all pages.
 
+*Justin Update 2
+I changed navbar to use current_user.gravatar_url so if a user has a gravatar
+it will use that as Stephens wonderful mug was showing up for every user.
