@@ -12,3 +12,17 @@
     <% end %>
   </div>
 </div>
+
+<%= render 'shared/board_modal' %>
+
+<script type="text/javascript">
+  $('#create_new_snipit').on('click',function(){
+    $("#board_modal").show();
+    $('#add_to_board_modal').css('margin-left', '-' + (($('#add_to_board_modal').width()) / 2) + 'px' );
+    $('#add_to_board_modal').css('margin-top', '-' + (($('#add_to_board_modal').height()) / 2) + 'px' );
+  });
+
+  $("#second_mask").on('click', function(){
+    $('#board_modal').hide();
+  });
+</script>

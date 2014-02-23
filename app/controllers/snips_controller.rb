@@ -11,6 +11,7 @@ class SnipsController < ApplicationController
   def new
     @snip = Snip.new
     @languages = Language.all
+    @boards = Board.where('user_id = ?', session[:id])
   end
 
   def create
