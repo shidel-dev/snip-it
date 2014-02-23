@@ -26,9 +26,11 @@
     <%end%>
     <% if current_page?(boards_path) %>
       <% @boards.each do |board| %>
-        <div class="card">
-          <h4 class="card_title"><%= board.title %></h4>
-        </div>
+        <%= link_to board_path(board) do %>
+          <div class="board">
+            <h4 class="board_title"><%= board.title %></h4>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
