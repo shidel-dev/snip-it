@@ -36,31 +36,9 @@
   </div>
 </div>
 
-<div class='modalHolder'>
-  <div class='content'>
-    <div id="show_card">
-      <button id='add_to_board_button'>&#60;&#62;</button>
-      <div id="content"></div>
-    </div>
-  </div>
-  <div class='mask'></div>
-</div>
 
-<div id="board_modal">
-  <div class="content" id="add_to_board_modal">
-    <%= text_field_tag :new_board, nil, :placeholder => "New Board" %>
-    <div id="user_boards">
-      <ul>
-        <% @boards.each do |board| %>
-          <%= link_to '#', :class => "chosen_board", :id => board.id do %>
-            <li><%= board.title %></li>
-          <% end %>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-  <div id="second_mask"></div>
-</div>
+<%= render 'shared/modal_holder' %>
+<%= render 'shared/board_modal' %>
 
 <%= javascript_include_tag "ace/ace" %>
 <%= javascript_include_tag "application" %>
