@@ -9,7 +9,7 @@ function format(json){
 $(document).ready(function() {
 
   $('.cards_data').on('click', function(e) {
-    $('.modalHolder').css('display', 'block');
+    $('.modalHolder').show()
 
     $('body').css('overflow', 'hidden');
     var cardData = $(e.target).data('snips') || $(e.target).parent().data('snips');
@@ -17,7 +17,7 @@ $(document).ready(function() {
     _.templateSettings.variable = "v";
     var template = _.template($("script.template").html());
 
-    $('.content').html(template(cardData));
+    $('#content').html(template(cardData));
     $("#results_editor").text(cardData.content);
     var editor = ace.edit("results_editor");
     editor.setTheme("ace/theme/textmate");
@@ -35,12 +35,16 @@ $(document).ready(function() {
     $('.modalHolder').css('display', 'none');
     $('body').css('overflow', 'visible');
   });
-
-});
-
-$(document).on('page:load', function() {
-    console.log("here");
+  
   $('#add_to_board_button').on('click',function(){
-    $("#add_to_board_modal").show();
+    $("#board_modal").show();
+    $('#add_to_board_modal').css('margin-left', '-' + (($('#add_to_board_modal').width()) / 2) + 'px' );
+    $('#add_to_board_modal').css('margin-top', '-' + (($('#add_to_board_modal').height()) / 2) + 'px' );
   });
+
+  $("#second_mask").on('click', function(){
+    $('#board_modal').hide();
+  });
+
 });
+
