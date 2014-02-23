@@ -487,3 +487,10 @@ select {
 #create_new_snipit:active{
   background: linear-gradient(#F3f3f3, #e9e9e9);
 }
+
+/*FLASH MESSAGES*/
+#flash_success_sign_up {
+  position: absolute;
+  top: 150px;
+  left: 521px;
+}

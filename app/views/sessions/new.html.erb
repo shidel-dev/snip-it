@@ -1,3 +1,9 @@
+
+	<% if flash[:success_sign_up] %>
+		<p id='flash_success_sign_up'><%= flash[:success_sign_up] %><p>
+	<% end %>
+
+
 <div>
   <%= form_tag("/sessions", method: "post", class: "form-style") do |f| %>
     <%= label_tag("Email:") %>
