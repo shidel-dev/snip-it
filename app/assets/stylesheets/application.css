@@ -136,10 +136,11 @@ nav > form {
   height: 43px;
 }
 
-#right_hand_navigation {
+.right_hand_navigation {
   float: right;
   min-width: 8em;
   text-align: right;
+  line-height: 40px;
 }
 
 #new_snipit_link {
@@ -175,6 +176,13 @@ nav > form {
   line-height: 43px;
   width: 25em;
 }
+
+#nav_session {
+  display: inline-block;
+  width: 7em;
+}
+
+/* FORMS */
 
 form label, form input {
   -webkit-box-sizing: border-box;
@@ -384,14 +392,15 @@ form input:focus {
 
 /* MISC */
 
-#session {
+#home_session {
   position: absolute;
   right: 300px;
   top: 30px;
 }
 
-#session a {
+.session a {
   text-decoration: none;
+  color: #333333  ;
 }
  
 /* MODAL CARD */
