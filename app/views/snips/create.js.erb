@@ -1,0 +1,18 @@
+
+<% if @redirect %>
+	location.href = 'http://localhost:3000' + "<%= escape_javascript(@redirect) %>";
+<% end %>
+
+
+var errors = gon.errors;
+$.each(errors, function(key, value) {
+	if (key == 'language_id') {
+		$('#language_error').html(value);
+	};
+	$('#' + key).attr('placeholder', value);
+	$('#' + key).addClass('create-error');
+
+	if (editor.getSession().getValue() == "") {
+		$('#content_error').html('Enter Some Code!')
+	}
+});

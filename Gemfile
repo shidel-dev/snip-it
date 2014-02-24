@@ -51,6 +51,9 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'gravtastic'
 
+#pass data from controller to js
+gem 'gon'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'

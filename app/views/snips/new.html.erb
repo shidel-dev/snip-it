@@ -1,11 +1,14 @@
 <div id="container">
   <div id="new_snipit_container">
     <%= form_for(:snip, url: snips_path, html: {id: 'new_snip_form'}) do |f| %>
-      <p><%= f.text_field :title,  :placeholder => 'Title', :id => 'snipit_form_title' %></p>
-      <p><%= f.text_field :description, :placeholder => 'Description' %></p>
+      <p><%= f.text_field :title,  :placeholder => 'Title', :id => 'title' %></p>
+      <p><%= f.text_field :description, :placeholder => 'Description', id: 'description' %></p>
 
-      <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }.insert(0,'Choose Language')),{},{:class => 'option_select', :selected => 'Language'})%></p>
+      <p><%= f.select(:language_id, options_for_select(@languages.map { |l| [l.name, l.id, {"data-code" => l.code}] }.insert(0,'Choose Language')),{},{:class => 'option_select', :selected => 'Language'})%>
+        <span id='language_error'></span>
+      </p>
       <%= f.hidden_field :content %>
+      <span id='content_error'></span>
       <%= render partial: 'editor' %>
 
       <%= submit_tag 'Create New Snipit', :id => 'create_new_snipit', :class =>'submit_button'%> <!-- onclick popup modal to choose what board to put it in -->
@@ -13,16 +16,3 @@
   </div>
 </div>
 
-<%= render 'shared/board_modal' %>
-
-<script type="text/javascript">
-  $('#create_new_snipit').on('click',function(){
-    $("#board_modal").show();
-    $('#add_to_board_modal').css('margin-left', '-' + (($('#add_to_board_modal').width()) / 2) + 'px' );
-    $('#add_to_board_modal').css('margin-top', '-' + (($('#add_to_board_modal').height()) / 2) + 'px' );
-  });
-
-  $("#second_mask").on('click', function(){
-    $('#board_modal').hide();
-  });
-</script>

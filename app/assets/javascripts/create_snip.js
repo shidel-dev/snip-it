@@ -18,9 +18,7 @@ $(document).ready(function() {
     var content = $("#snip_content")
     content.val(editor.getSession().getValue());
     var data = $(this).serialize();
-    $.post('/snips', data, function() {
-      console.log('yea!');
-    })
+    $.post('/snips', data);
   })
 
   $('#snip_language_id').change(function() {

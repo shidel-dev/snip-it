@@ -16,8 +16,23 @@ class SnipsController < ApplicationController
 
   def create
     puts params
-    user = User.find(1)
-    user.snips << Snip.create(snip_params)
+    @snip = current_user.snips.build(snip_params)
+    respond_to do |format|
+      if @snip.save
+        @redirect = snip_path(@snip)
+        format.js
+      else
+        gon.errors = @snip.errors.as_json(full_messages: true)
+        format.js
+      end
+    end
+  end
+
+  def show
+    @snips = []
+    @snips << Snip.find(params[:id])
+    @languages = Language.all
+    @boards = Board.all
   end
 
   private
