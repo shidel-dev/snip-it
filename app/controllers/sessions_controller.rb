@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
       session[:id] = @user.id
-      redirect_to '/'
+      redirect_to '/boards'
     else
       flash.now[:login_error] = "Invalid Email/Password Combination"
       # puts "********* #{flash[errors]}"
