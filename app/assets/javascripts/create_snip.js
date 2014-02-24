@@ -13,6 +13,7 @@ $(document).ready(function() {
   $('#editor').focus(function(){
     console.log("focus");
   })
+
   $('#new_snip_form').on('submit', function(e) {
     e.preventDefault();
     var content = $("#snip_content")
@@ -24,6 +25,12 @@ $(document).ready(function() {
   })
 
   $('#snip_language_id').change(function() {
-    editor.getSession().setMode("ace/mode/"+ $('#snip_language_id :selected').data("code"))
+    editor.getSession().setMode("ace/mode/"+ $('#snip_language_id :selected').data("code"));
+  })
+
+  $(".chosen_board").on('click', function(){
+    $('#board_modal').hide();
+    $('.modalHolder').hide();
+    window.location.href = '/languages/'+$('#snip_language_id :selected').data("code")+'/snips';
   })
 });
