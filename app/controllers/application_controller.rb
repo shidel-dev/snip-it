@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def search
-    @snips = Snip.search_title_and_content(params[:search])
+    @snips = Snip.search_title_and_content(params[:search]).reverse
     @languages = Language.all.order('name')
     @search_title = "Search Results for: #{params[:search]}"
     @boards = Board.where('user_id = ?', session[:id])

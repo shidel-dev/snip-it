@@ -4,7 +4,7 @@ class LanguagesController < ApplicationController
     # all code snipits
     @languages = Language.all.order('name')
     language = Language.find_by_code(params[:code])
-    @snips = language.snips.all
+    @snips = language.snips.all.reverse
     @search_title = "#{language.name} snips"
     @boards = Board.where('user_id = ?', session[:id])
   end
